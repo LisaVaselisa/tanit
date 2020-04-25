@@ -1,0 +1,24 @@
+.site-list {
+  .kit-reset();
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.site-list__item {
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  border-top: 1px solid @border-light;
+}
+
+.site-list__link {
+  font-size: 20px;
+  line-height: 20px;
+  .kit-title();
+  .kit-big();
+  .kit-decor();
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+.details {
+  margin: 22px 0;
+  position: relative;
+}
+
+.details__title {
+  .kit-title();
+  font-size: 36px;
+  text-align: 60px;
+  margin: 0;
+  padding: 0 20px;
+  margin-bottom: 29px;
+}
+
+.details__list {
+  display: flex;
+  flex-direction: column;
+  .kit-reset();
+  padding: 0 20px;
+}
+
+.details__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    background: @bc-green;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 0;
+  }
+}
