@@ -20,91 +20,95 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="program">
-        <h1 class="program__title big-title">Подбор программы</h1>
-        <p class="program__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
-        <form class="program__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__order form-info">
+      <section class="form">
+        <h1 class="form__title big-title">Подбор программы</h1>
+        <form class="form__program" action="https://echo.htmlacademy.ru" method="post">
+          <p class="form__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
+
+          <fieldset class="form__order selection">
             <legend class="visually-hidden">Информация о коте</legend>
-            <div class="form-info__item">
-              <label class="form-info__label label-text" for="cat__name">Имя:*</label>
-              <input class="form-info__input" type="text" id="cat__name" name="name" placeholder="Барсик">
-            </div>
-            <div class="form-info__item">
-              <label class="form-info__label label-text" for="cat__weight">Вес (кг):*</label>
-              <input class="form-info__input" type="number" id="cat__weight" name="weight" placeholder="7">
-            </div>
-            <div class="form-info__item">
-              <label class="form-info__label label-text" for="info__age">Возраст (лет):</label>
-              <input class="form-info__input" type="number" id="cat__age" name="age" placeholder="7">
+            <div class="selection__list">
+              <p class="selection__item">
+                <label class="selection__label" for="name">Имя:*</label>
+                <input class="selection__input" type="text" id="name" name="cat-name" placeholder="Барсик">
+              </p>
+              <p class="selection__item">
+                <label class="selection__label" for="weight">Вес (кг):*</label>
+                <input class="selection__input" type="number" id="weight" name="cat-weight" placeholder="7">
+              </p>
+              <p class="selection__item">
+                <label class="selection__label" for="age">Возраст (лет):</label>
+                <input class="selection__input" type="number" id="age" name="cat-age" placeholder="7">
+              </p>
             </div>
           </fieldset>
-          <fieldset class="form__order form-diet">
+
+          <fieldset class="form__order selection">
             <legend class="visually-hidden">Тип программы</legend>
-            <ul class="form-diet__list">
-              <li class="form-diet__item">
-                <label class="form-diet__label label-diet">
-                  <input class="form-diet__input" type="radio" name="diet" value="lose" checked>Похудение
-                </label>
+            <ul class="selection__diet">
+              <li class="selection__diet-item">
+                <label class="selection__diet-label" for="lose">Похудение</label>
+                <input class="selection__diet-checkbox visually-hidden" type="radio" id="lose" name="diet" value="lose" checked>
               </li>
-              <li class="form-diet__item">
-                <label class="form-diet__label label-diet">
-                  <input class="form-diet__input" type="radio" name="diet" value="gain">Набор массы
-                </label>
+              <li class="selection__diet-item">
+                <label class="selection__diet-label" for="gain">Набор массы</label>
+                <input class="selection__diet-checkbox visually-hidden" type="radio" id="gain" name="diet" value="gain">
               </li>
-              <li class="form-diet__item">
-                <label class="form-diet__label label-diet" for="diet__advice">
-                  <input class="form-diet__input" type="radio" name="diet" value="advice">Не знаю (нужен ваш совет)
-                </label>
+              <li class="selection__diet-item">
+                <label class="selection__diet-label" for="advice">Не знаю (нужен ваш совет)</label>
+                <input class="selection__diet-checkbox visually-hidden" type="radio" id="advice" name="diet" value="advice">
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__order form-login">
-            <legend class="form-login__title form-title">Контактные данные (владельца кота)</legend>
-            <div class="form-login__item">
-              <label class="form-login__label label-text" for="mail">E-mail:*</label>
-              <input class="form-login__input" type="email" id="mail" name="email" placeholder="kuklachev@gmail.com">
-            </div>
-            <div class="form-login__item">
-              <label class="form-login__label label-text" for="phone">Телефон:*</label>
-              <input class="form-login__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+
+          <fieldset class="form__order selection">
+            <legend class="selection__name middle-title">Контактные данные <br>(владельца кота)</legend>
+            <div class="selection__list">
+              <p class="selection__item">
+                <label class="selection__label selection__label-mail" for="mail">E-mail:*</label>
+                <input class="selection__input" type="email" id="mail" name="email" placeholder="kuklachev@gmail.com">
+              </p>
+              <p class="selection__item">
+                <label class="selection__label selection__label-tel" for="phone">Телефон:*</label>
+                <input class="selection__input" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90">
+              </p>
             </div>
           </fieldset>
-          <fieldset class="form__order form-comment">
-            <legend class="form-comment__title form-title" for="comment">Комментарий</legend>
-            <textarea class="form-comment__textarea" name="coment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+
+          <fieldset class="form__order selection">
+            <legend class="selection__name middle-title" for="comment">Комментарий</legend>
+            <textarea class="selection__comment" name="coment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
 
-
-          <fieldset class="form__order form-extra">
-            <legend class="form-extra__title form-title">Дополнительно</legend>
-            <ul class="form-extra__list">
-              <li class="form-extra__item">
-                <label class="form-extra__label label-extra">
-                  <input class="form-extra__input" type="checkbox" name="sweetener" checked>Сахарозаменитель
-                </label>
+          <fieldset class="form__order selection">
+            <legend class="selection__name middle-title">Дополнительно</legend>
+            <ul class="selection__extra">
+              <li class="selection__extra-item">
+                <label class="selection__extra-label" for="sweetener">Сахарозаменитель</label>
+                <input class="selection__extra-radio visually-hidden" type="checkbox" id="sweetener"name="sweetener" checked>
               </li>
-              <li class="form-extra__item">
-                <label class="form-extra__label label-extra">
-                  <input class="label-extra__input" type="checkbox" name="water">Питьевая вода
-                </label>
+              <li class="selection__extra-item">
+                <label class="selection__extra-label" for="water">Питьевая вода</label>
+                <input class="selection__extra-radio visually-hidden" type="checkbox" id="water" name="water">
               </li>
-              <li class="form-extra__item">
-                <label class="form-extra__label label-extra">
-                  <input class="label-extra__input" type="checkbox" name="milk">Молоко
-                </label>
+              <li class="selection__extra-item">
+                <label class="selection__extra-label" for="milk">Молоко</label>
+                <input class="selection__extra-radio visually-hidden" type="checkbox" id="milk" name="milk">
               </li>
-              <li class="form-extra__item">
-                <label class="form-extra__label label-extra">
-                  <input class="label-extra__input" type="checkbox" name="vitamin">Витамины
-                </label>
+              <li class="selection__extra-item">
+                <label class="selection__extra-label" for="vitamin">Витамины</label>
+                <input class="selection__extra-radio visually-hidden" type="checkbox" id="vitamin" name="vitamin">
               </li>
             </ul>
           </fieldset>
-          <button class="form__submit-btn btn" type="submit">Отправить заявку</button>
-          <small class="form__note-text">* — Обязательные поля</small>
+          <div class="form__link">
+            <button class="form__btn btn" type="submit">Отправить заявку</button>
+            <small class="form__note-text">* — Обязательные поля</small>
+          </div>
+
         </form>
       </section>
+
     </main>
 
     <footer class="page-footer">

@@ -1,8 +1,9 @@
 .site-list {
-  .kit-reset();
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .site-list__item {
@@ -13,12 +14,13 @@
 }
 
 .site-list__link {
+  font-family: @font-title;
   font-size: 20px;
   line-height: 20px;
-  .kit-title();
-  .kit-big();
-  .kit-decor();
+  font-weight: 400;
+  color: @title;
+  text-transform: uppercase;
+  text-decoration: none;
   display: flex;
   justify-content: center;
-  cursor: pointer;
 }
