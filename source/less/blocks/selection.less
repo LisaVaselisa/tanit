@@ -1,0 +1,132 @@
+.selection__list,
+.selection__diet,
+.selection__extra {
+  font-family: @font-title;
+  font-size: 16px;
+  line-height: 18px;
+  color: @dark-title;
+  text-transform: uppercase;
+  list-style: none;
+  padding: 0 20px;
+}
+
+.selection__name {
+  padding: 10px 20px;
+  margin-bottom: 11px;
+}
+
+.selection__item {
+  display: flex;
+  align-items: center;
+}
+
+.selection__label {
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.selection__input {
+  border: 1px solid rgba(#cdcdcd, 0.5);
+  width: 100%;
+  padding-top: 14px;
+  padding-left: 16px;
+  padding-bottom: 14px;
+}
+
+.selection__input::placeholder {
+  color: @text;
+  text-transform: uppercase;
+}
+
+.selection__label-mail {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 14px;
+    left: 247px;
+  }
+}
+
+.selection__label-tel {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    left: 247px;
+  }
+}
+
+.selection__diet {
+  border-top: 1px solid @border-light;
+  border-bottom: 1px solid @border-light;
+  padding: 0 20px;
+}
+
+.selection__diet-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 46px;
+  margin-top: 29px;
+  margin-bottom: 26px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid @border-dark;
+    border-radius: 50%;
+    left: 0;
+    vertical-align: center;
+  }
+}
+
+.selection__comment {
+  display: block;
+  width: 280px;
+  min-height: 150px;
+  border: 1px solid rgba(#cdcdcd, 0.5);
+  resize: none;
+  margin: 20px;
+}
+
+.selection__comment::placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @font-title;
+  color: @text;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 13px;
+}
+
+.selection__extra {
+  padding-bottom: 5px;
+}
+
+.selection__extra-item {
+  position: relative;
+  padding-left: 46px;
+  margin-bottom: 26px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid @border-dark;
+    left: 0;
+  }
+}
