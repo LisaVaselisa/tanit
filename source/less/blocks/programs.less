@@ -1,48 +1,131 @@
 .programs {
-  position: relative;
-  margin: 10px 0;
-}
+  padding: 20px;
 
-.programs__title {
-  font-family: @font-title;
-  font-size: 24px;
-  font-weight: 400;
-  color: @title;
-  text-transform: uppercase;
-  margin-left: 71px;
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 
-  &::before {
-    content: "";
-    position: absolute;
-    background: @bc-green;
-    border-radius: 50%;
-    width: 51px;
-    height: 50px;
-    left: 22px;
-    top: 26px;
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
   }
 }
 
 .programs__list {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   list-style: none;
   padding: 0;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
 }
 
 .programs__item {
-  display: flex;
-  flex-wrap: wrap;
   position: relative;
   background-color: @bc-gray;
-  padding: 18px;
-  margin: 10px 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 81px;
+    padding-left: 52px;
+    padding-right: 265px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 46.7%;
+    padding-right: 56px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: @bc-green;
+    width: 51px;
+    height: 50px;
+    border-radius: 50%;
+    top: 24px;
+    left: 22px;
+
+    @media (min-width: @tablet-width) {
+      width: 200px;
+      height: 200px;
+      left: 446px;
+      top: 92px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+  }
+
+  &--slim {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+      width: 35px;
+      height: 49px;
+      top: 22px;
+      left: 30px;
+    }
+  }
+
+  &--pro {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+      width: 67px;
+      height: 28px;
+      top: 35px;
+      left: 13px;
+    }
+  }
+}
+
+.programs__title {
+  font-family: @font-title;
+  font-size: 24px;
+  list-style: 37px;
+  font-weight: 400;
+  color: @title;
+  text-transform: uppercase;
+  margin-left: 71px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 164px;
+  }
 }
 
 .programs__text {
-  padding-right: 19px;
-  margin: 23px 0;
+  margin-top: 26px;
+  margin-right: 19px;
+  margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 75px;
+    margin-bottom: 17px;
+  }
 }
 
 .programs__link {
@@ -55,4 +138,10 @@
   display: flex;
   padding-top: 20px;
   border-top: 1px solid @border-dark;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    border: none;
+  }
 }
