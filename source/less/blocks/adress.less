@@ -1,22 +1,106 @@
-.adress__info--index {
-  background-color: @bc-white;
+.adress {
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    .adress__info {
+      position: absolute;
+      z-index: 1;
+      background-color: @bc-white;
+      width: 570px;
+      top: 95px;
+      left: 110px;
+    }
+  }
 }
 
 .adress__info {
   display: flex;
   flex-direction: row;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  justify-content: space-between;
+  padding-top: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 26px;
+
+  &--index {
+    background-color: @bc-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 69px;
+    padding-left: 71px;
+    padding-right: 72px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 76px;
+    padding-right: 90px;
+  }
 }
 
 .adress__title {
-  padding-left: 19px;
+  margin: 0;
+  width: 50%;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 239px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 95px;
+  }
 }
 
 .adress__street {
   line-height: 20px;
+  width: 48.5%;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.adress__city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 19px;
+  }
 }
 
 .adress__map {
-  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 62px;
+    height: 53px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 177px;
+    right: 136px;
+
+    @media (min-width: @tablet-width) {
+      width: 113px;
+      height: 106px;
+      top: 150px;
+      right: 333px;
+    }
+  }
+}
+
+.adress__map-img {
+  width: 100%;
 }

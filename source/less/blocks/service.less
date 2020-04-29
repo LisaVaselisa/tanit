@@ -5,6 +5,13 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    color: @title;
+    text-align: left;
+    background: none;
+    padding-bottom: 529px;
+  }
 }
 
 .service__title {
@@ -14,14 +21,47 @@
   padding-top: 29px;
   padding-bottom: 19px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 33px;
+  }
 }
 
 .service__cite {
   line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
-.service__image {
+
+.service__img {
   margin-top: 29px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    width: 709px;
+    z-index: -1;
+    top: 341px;
+    left: 0;
+  }
+}
+
+.service__btn {
+  color: @white-text;
+  padding-top: 14px;
+  padding-bottom: 11px;
+  order: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

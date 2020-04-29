@@ -1,5 +1,9 @@
 .copyright {
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .copyright__link {
@@ -9,6 +13,12 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    svg {
+      margin-left: 23px;
+    }
+  }
 }
 
 .copyright__logo {
