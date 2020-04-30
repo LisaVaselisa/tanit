@@ -8,6 +8,10 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 53px 110px;
+  }
 }
 
 .page-header__logo {
@@ -25,12 +29,19 @@
 
   @media (min-width: @tablet-width) {
     width: 174px;
+    height: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 203px;
+    height: 60px;
   }
 }
 
 .page-header__toggle {
-  background-image: url("../img/icon-mobile-menu.svg");
   position: absolute;
+  content: "";
+  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-color: transparent;
   width: 25px;

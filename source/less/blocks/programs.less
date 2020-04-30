@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
+    padding: 80px 110px;
   }
 }
 
@@ -20,13 +20,12 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 80px;
   }
 }
 
 .programs__item {
   position: relative;
-  background-color: @bc-gray;
+  background-color: @bg-gray;
   padding: 20px;
   margin-top: 20px;
 
@@ -35,17 +34,20 @@
     padding-left: 52px;
     padding-right: 265px;
     padding-bottom: 62px;
+    margin-top: 0;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
     width: 46.7%;
     padding-right: 56px;
+    margin: 0;
   }
 
   &::before {
     content: "";
     position: absolute;
-    background: @bc-green;
+    background: @bg-green;
     width: 51px;
     height: 50px;
     border-radius: 50%;

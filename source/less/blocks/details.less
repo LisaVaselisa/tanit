@@ -2,11 +2,13 @@
   padding: 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 41px 0;
+    padding: 0;
+    margin: 21px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 79px 110px;
+    padding: 0 110px;
+    margin: 0;
   }
 }
 
@@ -48,18 +50,18 @@
     padding-top: 117px;
     padding-right: 62px;
     margin: 0;
+  }
 
-    @media (min-width: @desktop-width) {
-      width: 20.2%;
-      min-height: 240px;
-      padding-right: 0;
-    }
+  @media (min-width: @desktop-width) {
+    width: 20.2%;
+    min-height: 240px;
+    padding-right: 0;
   }
 
   &::before {
     content: "";
     position: absolute;
-    background: @bc-green;
+    background: @bg-green;
     width: 60px;
     height: 60px;
     top: 0;

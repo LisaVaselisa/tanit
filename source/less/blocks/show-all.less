@@ -2,9 +2,16 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  border-top: 1px solid @border-light;
   border-bottom: 1px solid @border-light;
   padding-top: 83px;
+  padding-right: 20px;
+  padding-left: 20px;
   padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .show-all__title {
@@ -16,4 +23,20 @@
   line-height: 16px;
   padding-bottom: 20px;
   margin: auto;
+}
+
+.catalog-card__btn-show {
+  font-family: @font-title;
+  font-size: 16px;
+  line-height: 20px;
+  color: @text;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  background-color: @bg-gray;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 13px;
 }
