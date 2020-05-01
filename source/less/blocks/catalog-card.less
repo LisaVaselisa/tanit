@@ -6,15 +6,21 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     margin-top: 140px;
+    background-color: @bg-gray;
   }
 }
 
 .catalog-card__link {
   display: block;
-  width: 50%;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 100%;
+    min-height: 212px;
+    margin-top: -80px;
+    margin-bottom: 18px;
   }
 }
 
@@ -31,7 +37,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    width: 249px;
+    width: 100%;
+    padding: 0 38px;
   }
 }
 
@@ -44,7 +51,8 @@
     font-size: 20px;
     line-height: 20px;
     text-align: center;
-    width: 100%;
+    margin: auto;
+    padding-bottom: 21px;
   }
 }
 
@@ -54,15 +62,24 @@
   border-collapse: collapse;
   padding: 0;
   margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    margin-bottom: 33px;
+  }
 }
 
 .catalog-card__cell {
   @media (min-width: @tablet-width) {
-    border-bottom: 1px solid @border-light;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid @border-dark;
+    padding: 7px 0;
   }
 }
 
 .catalog-card__left {
+  text-align: left;
   padding-right: 58px;
 }
 
@@ -71,7 +88,10 @@
 }
 
 .catalog-card__btn {
-  color: @white-text;
   width: 100%;
-  padding: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+    width: 76.86%;
+  }
 }
