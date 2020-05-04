@@ -7,12 +7,11 @@
   @media (min-width: @tablet-width) {
     text-align: left;
     color: @title;
-    padding: 0 90px;
-    margin-top: 37px;
+    margin-top: 35px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    margin-top: 0;
   }
 
   &::before {
@@ -35,16 +34,17 @@
       content: "";
       position: absolute;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-color: @bg-photo;
+      background-repeat: no-repeat;
+      background-position: right bottom;
       display: block;
-      width: 720px;
+      width: 50%;
       height: 696px;
-      top: -165px;
-      left: 719px;
+      top: -175px;
+      right: 0;
+      z-index: -1;
     }
   }
 }
-
 
 .service__title {
   font-size: 36px;
@@ -57,12 +57,15 @@
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    width: 66%;
     padding: 0;
+    margin-left: 90px;
     margin-bottom: 33px;
   }
 
   @media (min-width: @desktop-width) {
     width: 45%;
+    padding-top: 60px;
   }
 }
 
@@ -75,6 +78,7 @@
     font-size: 20px;
     line-height: 20px;
     display: block;
+    margin-left: 90px;
     margin-bottom: 45px;
   }
 
@@ -83,35 +87,26 @@
   }
 }
 
-.service__wrap {
-  @media (min-width: @tablet-width) {
-    width: 709px;
-    height: 580px;
-  }
-
-  @media (min-width: @desktop-width) {
-    height: 305px;
-  }
-}
-
 .service__img {
+  display: block;
   margin-top: 29px;
 
   @media (min-width: @tablet-width) {
+    content: "";
     position: absolute;
-    height: 609px;
+    display: block;
     width: 709px;
-    z-index: -1;
+    height: 609px;
     top: 190px;
-    left: 0;
+    z-index: -1;
     margin: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
-    top: -20px;
-    left: 560px;
+    top: -10px;
+    left: calc(50% - 160px);
   }
 }
 
@@ -120,7 +115,6 @@
   line-height: 18px;
   padding-top: 14px;
   padding-bottom: 11px;
-  margin: 0 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -128,6 +122,11 @@
     width: 245px;
     padding-top: 17px;
     padding-bottom: 15px;
-    margin: 0;
+    margin-left: 90px;
+    margin-bottom: 529px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 268px;
   }
 }

@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -24,7 +25,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="form">
+      <section class="form container">
         <h1 class="form__title big-title">Подбор программы</h1>
         <form class="form__program" action="https://echo.htmlacademy.ru" method="post">
           <p class="form__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
@@ -111,15 +112,16 @@
           </div>
         </form>
       </section>
-
     </main>
 
     <footer class="page-footer">
-      <section class="page-footer__adress adress">
+      <section class="adress">
         <div class="adress__info">
-          <h2 class="visually-hidden">Как нас найти</h2>
-          <p class="adress__title main-title">приглашаем <br>к сотрудничеству дилеров!</p>
-          <p class="adress__street">ул. Большая Конюшенная, д. 19/8 <span class="adress__city">Санкт-Петербург</span></p>
+          <div class="adress__wrap container">
+            <h2 class="visually-hidden">Как нас найти</h2>
+            <p class="adress__title main-title">приглашаем <br>к сотрудничеству дилеров!</p>
+            <p class="adress__street">ул. Большая Конюшенная, д. 19/8 <span class="adress__city">Санкт-Петербург</span></p>
+          </div>
         </div>
         <div class="adress__map">
           <picture>
@@ -129,7 +131,7 @@
           </picture>
         </div>
       </section>
-      <section class="footer__container">
+      <section class="footer__wrap container">
         <div class="page-footer__logo">
           <a class="page-footer__logo-link">
             <img class="page-footer__logo-img" src="img/logo-footer.svg"  width="128" height="24" alt="Логотип Cat Energy">

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -25,22 +26,21 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Cat Energy - магазин функционального питания для котов</h1>
+
       <section class="service">
-        <h2 class="service__title">Функциональное питание для котов</h2>
-        <b class="service__cite">Занялся собой? Займись котом!</b>
-        <div class="service__wrap">
+        <div class="container">
+          <h2 class="service__title">Функциональное питание для котов</h2>
+          <b class="service__cite">Занялся собой? Займись котом!</b>
           <picture>
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" >
             <img class="service__img" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Банка c кормом">
-            <a class="service__btn btn" href="form.html">Подобрать программу</a>
           </picture>
-
+          <a class="service__btn btn" href="form.html">Подобрать программу</a>
         </div>
-
       </section>
 
-      <section class="programs">
+      <section class="programs container">
         <h2 class="visually-hidden">Виды программ</h2>
         <ul class="programs__list">
           <li class="programs__item programs__item--slim">
@@ -57,7 +57,7 @@
           </li>
         </ul>
       </section>
-      <section class="details">
+      <section class="details container">
         <h2 class="details__title big-title">Как это работает</h2>
         <ul class="details__list">
           <li class="details__item details__item--leaf">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -67,41 +67,43 @@
         </ul>
       </section>
       <section class="example">
-        <h2 class="example__title big-title">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <ul class="example__list">
-          <li class="example__item">
-            <p class="example__total middle-title">5 кг</p>
-            <p class="example__total-text">снижение веса</p>
-          </li>
-          <li class="example__item">
-            <p class="example__total middle-title">60 дней</p>
-            <p class="example__total-text">затрачено времени</p>
-          </li>
-        </ul>
-        <p class="example__list-text">Затраты на питание: <span class="example__list-cost">15 000 руб.</span></p>
-        <div class="example__slider">
-          <div class="example__slider-photo example__slider-photo--before">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото кота до упоребления Кэт энерджи">
-            </picture>
-          </div>
-          <div class="example__slider-photo example__slider-photo--after">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-              <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото кота после упоребления Кэт энерджи">
-            </picture>
-          </div>
-          <div class="example__slider-range">
-            <button class="example__range-btn example__range-btn--before" type="button">Было</button>
-            <div class="example__slider-bar">
-              <div class="example__slider-scale"></div>
+        <div class="container">
+          <h2 class="example__title big-title">Живой пример</h2>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <ul class="example__list">
+            <li class="example__item">
+              <p class="example__total middle-title">5 кг</p>
+              <p class="example__total-text">снижение веса</p>
+            </li>
+            <li class="example__item">
+              <p class="example__total middle-title">60 дней</p>
+              <p class="example__total-text">затрачено времени</p>
+            </li>
+          </ul>
+          <p class="example__list-text">Затраты на питание: <span class="example__list-cost">15 000 руб.</span></p>
+          <div class="example__slider">
+            <div class="example__slider-photo example__slider-photo--before">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото кота до упоребления Кэт энерджи">
+              </picture>
             </div>
-            <button class="example__range-btn example__range-btn--after" type="button">Стало</button>
+            <div class="example__slider-photo example__slider-photo--after">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото кота после упоребления Кэт энерджи">
+              </picture>
+            </div>
+            <div class="example__slider-range">
+              <button class="example__range-btn example__range-btn--before" type="button">Было</button>
+              <div class="example__slider-bar">
+                <div class="example__slider-scale"></div>
+              </div>
+              <button class="example__range-btn example__range-btn--after" type="button">Стало</button>
+            </div>
           </div>
         </div>
       </section>
@@ -110,9 +112,11 @@
     <footer class="page-footer">
       <section class="adress">
         <div class="adress__info adress__info--index">
-          <h2 class="visually-hidden">Как нас найти</h2>
-          <p class="adress__title main-title">приглашаем <br>к сотрудничеству дилеров!</p>
-          <p class="adress__street">ул. Большая Конюшенная, д. 19/8 <span class="adress__city">Санкт-Петербург</span></p>
+          <div class="adress__wrap container">
+            <h2 class="visually-hidden">Как нас найти</h2>
+            <p class="adress__title main-title"> приглашаем <br>к сотрудничеству дилеров!</p>
+            <p class="adress__street">ул. Большая Конюшенная, д. 19/8 <span class="adress__city">Санкт-Петербург</span></p>
+          </div>
         </div>
         <div class="adress__map">
           <picture>
@@ -122,7 +126,7 @@
           </picture>
         </div>
       </section>
-      <section class="footer__container">
+      <section class="footer__wrap container">
         <div class="page-footer__logo">
           <a class="page-footer__logo-link">
             <img class="page-footer__logo-img" src="img/logo-footer.svg"  width="128" height="24" alt="Логотип Cat Energy">

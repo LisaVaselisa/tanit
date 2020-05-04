@@ -8,14 +8,19 @@
 }
 
 .site-list__item {
+  border-top: 1px solid @border-light;
   padding-top: 24px;
   padding-bottom: 20px;
-  border-top: 1px solid @border-light;
+
 
   @media (min-width: @tablet-width) {
     border: none;
     width: auto;
-    padding: 0;
+    padding-bottom: 20px;
+    margin-left: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-left: 37px;
   }
 }

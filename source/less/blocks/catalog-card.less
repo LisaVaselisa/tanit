@@ -1,11 +1,5 @@
 .catalog-card {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-
   @media (min-width: @tablet-width) {
-    padding: 0;
-    margin-top: 140px;
     background-color: @bg-gray;
   }
 }
@@ -38,7 +32,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 38px;
+    padding-left: 38px;
+    padding-right: 38px;
   }
 }
 
@@ -91,7 +86,10 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
-    width: 76.86%;
+    width: 249px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
   }
 }

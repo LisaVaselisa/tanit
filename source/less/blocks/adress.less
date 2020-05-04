@@ -1,26 +1,11 @@
 .adress {
-  @media (min-width: @desktop-width) {
-    position: relative;
-  }
+  position: relative;
+  width: 100%;
 }
 
 .adress__info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding-top: 31px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 26px;
-
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    z-index: 1;
-    background-color: @bg-white;
-    width: 570px;
-    top: 95px;
-    left: 110px;
-  }
 
   &--index {
     background-color: @bg-white;
@@ -28,14 +13,26 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 69px;
-    padding-left: 71px;
-    padding-right: 72px;
     padding-bottom: 62px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 76px;
-    padding-right: 90px;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: @bg-white;
+    width: 570px;
+    top: calc(20% + 15px);
+    right: calc(50% + 40px);
+  }
+}
+
+.adress__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
   }
 }
 
@@ -48,11 +45,13 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 25px;
-    margin-right: 239px;
+    width: 30%;
+    margin-left: 31px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 95px;
+    width: 39%;
+    margin-left: 36px;
   }
 }
 
@@ -65,11 +64,14 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
+    width: 26%;
+    margin-right: 32px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
-    width: 50%;
+    width: 32%;
+    margin-right: 50px;
   }
 }
 
@@ -94,19 +96,26 @@
     height: 53px;
     background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    top: 177px;
-    right: 136px;
+    background-size: 100%;
+    top: calc(50% - 24px);
+    left: calc(50% - 34px);
+
 
     @media (min-width: @tablet-width) {
       width: 113px;
       height: 106px;
-      top: 150px;
-      right: 333px;
+      top: calc(50% - 40px);
+      left: calc(50% - 48px);
+    }
+
+    @media (min-width: @desktop-width) {
+      top: calc(50% - 45px);
+      left: calc(65% + 50px);
     }
   }
 }
 
 .adress__map-img {
+  display: block;
   width: 100%;
 }

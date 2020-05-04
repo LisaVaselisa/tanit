@@ -1,6 +1,4 @@
 .catalog__title {
-  padding-left: 20px;
-
   @media (min-width: @tablet-width) {
     padding: 0;
   }
@@ -23,10 +21,26 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border-top: 1px solid @border-light;
+
+
+  @media (max-width: @mobile-width-only) {
+    border-top: 1px solid @border-light;
+    margin-top: -1px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     border: none;
+    width: 324px;
+    padding-bottom: 40px;
+    margin-top: 140px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    margin-top: 143px;
+  }
+
 }
