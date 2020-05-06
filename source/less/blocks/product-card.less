@@ -1,6 +1,15 @@
 
 .product-card {
-  align-items: center;
+
+  padding-bottom: 17px;
+  border-bottom: 1px solid @border-dark;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @border-light;
+    padding-right: 38px;
+    padding-left: 38px;
+    padding-bottom: 28px;
+  }
 }
 
 .product-card__table {
@@ -27,4 +36,10 @@
 
 .product-card__cost {
   text-align: right;
+}
+
+.product-card__btn {
+  color: @white-text;
+  width: 100%;
+  padding: 13px;
 }

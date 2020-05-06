@@ -1,22 +1,121 @@
-.adress__info--index {
-  background-color: @bc-white;
+.adress {
+  position: relative;
+  width: 100%;
 }
 
 .adress__info {
+  padding-top: 31px;
+  padding-bottom: 26px;
+
+  &--index {
+    background-color: @bg-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 69px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-color: @bg-white;
+    width: 570px;
+    top: calc(20% + 15px);
+    right: calc(50% + 40px);
+  }
+}
+
+.adress__wrap {
   display: flex;
-  flex-direction: row;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+  }
 }
 
 .adress__title {
-  padding-left: 19px;
+  font-size: 16px;
+  line-height: 20px;
+  width: 50%;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+    width: 30%;
+    margin-left: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 39%;
+    margin-left: 36px;
+  }
 }
 
 .adress__street {
   line-height: 20px;
+  width: 48.5%;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    width: 26%;
+    margin-right: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    width: 32%;
+    margin-right: 50px;
+  }
+}
+
+.adress__city {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 19px;
+  }
 }
 
 .adress__map {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 62px;
+    height: 53px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: calc(50% - 24px);
+    left: calc(50% - 34px);
+
+
+    @media (min-width: @tablet-width) {
+      width: 113px;
+      height: 106px;
+      top: calc(50% - 40px);
+      left: calc(50% - 48px);
+    }
+
+    @media (min-width: @desktop-width) {
+      top: calc(50% - 45px);
+      left: calc(65% + 50px);
+    }
+  }
+}
+
+.adress__map-img {
   display: block;
+  width: 100%;
 }

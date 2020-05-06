@@ -7,11 +7,11 @@
   color: @dark-title;
   text-transform: uppercase;
   list-style: none;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .selection__name {
-  padding: 10px 20px;
+  padding: 10px 0;
   margin-bottom: 11px;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .selection__input {
-  border: 1px solid rgba(#cdcdcd, 0.5);
+  border: 1px solid @border-form;
   width: 100%;
   padding-top: 14px;
   padding-left: 16px;
@@ -70,7 +70,6 @@
 .selection__diet {
   border-top: 1px solid @border-light;
   border-bottom: 1px solid @border-light;
-  padding: 0 20px;
 }
 
 .selection__diet-item {
@@ -95,11 +94,11 @@
 
 .selection__comment {
   display: block;
-  width: 280px;
+  width: 100%;
   min-height: 150px;
-  border: 1px solid rgba(#cdcdcd, 0.5);
+  border: 1px solid @border-form;
   resize: none;
-  margin: 20px;
+  margin: 20px 0;
 }
 
 .selection__comment::placeholder {

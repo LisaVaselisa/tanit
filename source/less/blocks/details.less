@@ -1,5 +1,16 @@
+.details {
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 79px;
+  }
+}
+
 .details__title {
-  padding: 0 20px;
   margin: 0;
 }
 
@@ -7,22 +18,97 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 10px 20px;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 63px;
+    counter-reset: number;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 
 .details__item {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   padding-left: 80px;
-  margin-bottom: 20px;
+  margin-top: 25px;
 
   &::before {
     content: "";
     position: absolute;
-    background: @bc-green;
+    background: @bg-green;
+    background-repeat: no-repeat;
     width: 60px;
     height: 60px;
+    top: 0;
     left: 0;
+    background-position: center;
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("../img/advantage-leaf@1x.png");
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../img/advantage-powder@1x.png");
+    }
+  }
+
+  &--dining {
+    &::before {
+      background-image: url("../img/advantage-dining@1x.png");
+    }
+  }
+
+  &--clock {
+    &::before {
+      background-image: url("../img/advantage-clock@1x.png");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 46%;
+    min-height: 290px;
+    padding-left: 0;
+    padding-top: 117px;
+    padding-right: 62px;
+    margin: 0;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      counter-increment: number;
+      content: counter(number);
+      display: block;
+      font-family: @font-title;
+      font-size: 281px;
+      line-height: 281px;
+      color: @bg-gray;
+      z-index: -1;
+      top: -39px;
+      left: 116px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 20.2%;
+    min-height: 240px;
+    padding-right: 0;
   }
 }

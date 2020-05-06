@@ -1,10 +1,49 @@
 .service {
+  position: relative;
   font-family: @font-title;
   color: @white-text;
   text-align: center;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    color: @title;
+    margin-top: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: @bg-photo;
+    display: block;
+    width: 100%;
+    height: 305px;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      display: block;
+      width: 50%;
+      height: 696px;
+      top: -175px;
+      right: 0;
+      z-index: -1;
+    }
+  }
 }
 
 .service__title {
@@ -14,14 +53,80 @@
   padding-top: 29px;
   padding-bottom: 19px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    width: 66%;
+    padding: 0;
+    margin-left: 90px;
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45%;
+    padding-top: 60px;
+  }
 }
 
 .service__cite {
   line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    display: block;
+    margin-left: 90px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
+  }
 }
 
-.service__image {
+.service__img {
+  display: block;
   margin-top: 29px;
+
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 709px;
+    height: 609px;
+    top: 190px;
+    z-index: -1;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+    top: -10px;
+    left: calc(50% - 160px);
+  }
+}
+
+.service__btn {
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 14px;
+  padding-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 245px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    margin-left: 90px;
+    margin-bottom: 529px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 268px;
+  }
 }
