@@ -8,12 +8,21 @@
 
 .form__program {
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding: 37px 0;
+  }
 }
 
 .form__text {
   font-family: @font-title;
   color: @title;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__order {
@@ -22,22 +31,22 @@
   margin: 0;
 }
 
+.form__link {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
 .form__btn {
-  font-family: @font-title;
-  font-size: 16px;
-  line-height: 20px;
-  color: @white-text;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: block;
-  background-color: @bg-green;
   width: 100%;
-  padding-top: 13px;
-  padding-bottom: 11px;
   margin-bottom: 23px;
-  border: none;
-  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    width: 50%;
+  }
 }
 
 .form__note-text {
@@ -45,4 +54,8 @@
   line-height: 16px;
   display: block;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }
