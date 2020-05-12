@@ -29,6 +29,12 @@
     top: 2px;
     z-index: -1;
 
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-color: @bg-photo;
+      background-size: contain;
+    }
+
     @media (min-width: @tablet-width) {
       display: none;
     }
@@ -41,10 +47,16 @@
       background-position: left top;
       display: block;
       width: 50%;
-      height: 696px;
+      height: 100%;
       top: -171px;
       right: 0;
       z-index: -1;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-color: @bg-photo;
+        background-size: contain;
+      }
     }
   }
 }
