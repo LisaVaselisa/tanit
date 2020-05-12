@@ -5,6 +5,32 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+         <!-- Pixel Glass -->
+<style>
+  html {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /* По умолчанию показывается мобильный макет */
+    background-image: url("../img/pixel-cat-energy-catalog-mobile.png");
+  }
+  /* Планшет */
+  @media (min-width: 768px) {
+    html {
+      /* Планшетный макет */
+      background-image: url("../img/pixel-cat-energy-catalog-tablet.png");
+    }
+  }
+  /* Десктоп */
+  @media (min-width: 1300px) {
+    html {
+      /* Десктопный макет */
+      background-image: url("../img/pixel-cat-energy-catalog-desktop.png");
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+<script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+<!-- // Pixel Glass -->
   </head>
   <body>
     <header class="page-header">
@@ -298,13 +324,7 @@
             <p class="adress__street">ул. Большая Конюшенная, д. 19/8 <span class="adress__city">Санкт-Петербург</span></p>
           </div>
         </div>
-        <div class="adress__map">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-            <img class="adress__map-img" src="img/bg-map-mobile@1x.png" alt="Карта проезда">
-          </picture>
-        </div>
+        <div class="adress__map"></div>
       </section>
       <section class="footer__wrap container">
         <div class="page-footer__logo">

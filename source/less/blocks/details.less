@@ -1,12 +1,12 @@
 .details {
-  margin-top: 20px;
+  margin-top: 17px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 21px;
+    margin-top: 16px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 79px;
+    margin-top: 77px;
   }
 }
 
@@ -19,13 +19,14 @@
   flex-direction: column;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 30px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 63px;
+    margin-top: 73px;
+    margin-bottom: 0;
     counter-reset: number;
   }
 
@@ -40,7 +41,6 @@
   display: flex;
   flex-direction: column;
   padding-left: 80px;
-  margin-top: 25px;
 
   &::before {
     content: "";
@@ -49,7 +49,7 @@
     background-repeat: no-repeat;
     width: 60px;
     height: 60px;
-    top: 0;
+    top: -2px;
     left: 0;
     background-position: center;
   }
@@ -78,13 +78,24 @@
     }
   }
 
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 26px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 46%;
-    min-height: 290px;
+    min-height: 282px;
     padding-left: 0;
-    padding-top: 117px;
-    padding-right: 62px;
-    margin: 0;
+    padding-top: 110px;
+    padding-right: 80px;
+
+    &:first-child {
+      margin-bottom: 36px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 36px;
+    }
 
     &::before {
       width: 80px;
@@ -101,8 +112,8 @@
       line-height: 281px;
       color: @bg-gray;
       z-index: -1;
-      top: -39px;
-      left: 116px;
+      top: -40px;
+      left: 115px;
     }
   }
 

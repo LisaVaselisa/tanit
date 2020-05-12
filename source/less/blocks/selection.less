@@ -17,8 +17,8 @@
 
 // Невидимые элементы
 
-.selection__extra-radio,
-.selection__diet-checkbox {
+.selection__extra-checkbox,
+.selection__diet-radio {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -148,7 +148,7 @@
   }
 }
 
-.selection__diet-checkbox:checked + .selection__diet-label::after {
+.selection__diet-radio:checked + .selection__diet-label::after {
   display: block;
 }
 
@@ -240,8 +240,6 @@
 //Дополнительные товары
 
 .selection__extra {
-  padding-bottom: 5px;
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -253,8 +251,6 @@
 }
 
 .selection__extra-item {
-  position: relative;
-  padding-left: 46px;
   margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
@@ -265,7 +261,9 @@
 }
 
 .selection__extra-label {
+  position: relative;
   cursor: pointer;
+  padding-left: 46px;
 
   &::before {
     position: absolute;
@@ -273,7 +271,7 @@
     width: 30px;
     height: 30px;
     border: 1px solid @border-dark;
-    top: -5px;
+    top: 0;
     left: 0;
 
     @media (min-width: @tablet-width) {
@@ -301,6 +299,6 @@
   }
 }
 
-.selection__extra-radio:checked + .selection__extra-label::after {
+.selection__extra-checkbox:checked + .selection__extra-label::after {
   display: block;
 }

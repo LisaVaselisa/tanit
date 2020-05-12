@@ -5,12 +5,13 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 24px 31px;
+    padding: 13px 30px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 53px 40px;
+    padding: 44px 40px;
   }
 }
 
@@ -18,7 +19,6 @@
   display: block;
   padding-left: 20px;
   padding-bottom: 15px;
-
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -42,13 +42,13 @@
 .page-header__toggle {
   position: absolute;
   content: "";
-  background-image: url("../img/icon-mobile-menu.svg");
+  background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   background-color: transparent;
   width: 25px;
   height: 19px;
   top: 22px;
-  right: 23px;
+  right: 17px;
   border: none;
   cursor: pointer;
 
@@ -60,6 +60,7 @@
 .page-header__nav-list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   list-style: none;
 
   @media (min-width: @tablet-width) {

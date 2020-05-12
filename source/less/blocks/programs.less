@@ -8,20 +8,20 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 
 .programs__item {
-  position: relative;
   background-color: @bg-gray;
-  padding: 20px;
+  padding: 0 20px;
   margin-top: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 81px;
+    padding-top: 76px;
     padding-left: 52px;
-    padding-right: 265px;
-    padding-bottom: 62px;
+    padding-right: 279px;
+    padding-bottom: 42px;
     margin-top: 0;
     margin-bottom: 30px;
   }
@@ -31,6 +31,25 @@
     padding-right: 55px;
     margin: 0;
   }
+}
+
+.programs__title {
+  position: relative;
+  font-size: 24px;
+  line-height: 37px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  padding-left: 71px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 163px;
+  }
 
   &::before {
     content: "";
@@ -39,21 +58,21 @@
     width: 51px;
     height: 50px;
     border-radius: 50%;
-    top: 24px;
-    left: 22px;
+    top: 4px;
+    left: 2px;
 
     @media (min-width: @tablet-width) {
       width: 200px;
       height: 200px;
-      left: 446px;
-      top: 92px;
+      left: 394px;
+      top: 16px;
     }
 
     @media (min-width: @desktop-width) {
       width: 100px;
       height: 100px;
-      top: 47px;
-      left: 52px;
+      top: -30px;
+      left: 0;
     }
   }
 
@@ -68,21 +87,21 @@
       background-image: url("../img/icon-cat-slim.svg");
       width: 35px;
       height: 49px;
-      top: 22px;
-      left: 30px;
+      top: 2px;
+      left: 10px;
 
       @media (min-width: @tablet-width) {
         width: 141px;
         height: 194px;
-        top: 80px;
-        left: 475px;
+        top: 4px;
+        left: 424px;
       }
 
       @media (min-width: @desktop-width) {
         width: 71px;
         height: 97px;
-        top: 41px;
-        left: 65px;
+        top: -37px;
+        left: 13px;
       }
     }
   }
@@ -92,54 +111,49 @@
       background-image: url("../img/icon-cat-pro.svg");
       width: 67px;
       height: 28px;
-      top: 35px;
-      left: 13px;
+      top: 15px;
+      left: -7px;
 
       @media (min-width: @tablet-width) {
         width: 268px;
         height: 113px;
-        top: 135px;
-        left: 412px;
+        top: 58px;
+        left: 360px;
       }
 
       @media (min-width: @desktop-width) {
         width: 134px;
         height: 57px;
-        top: 69px;
-        left: 34px;
+        top: -9px;
+        left: -18px;
       }
     }
   }
 }
 
-.programs__title {
-  font-size: 24px;
-  list-style: 37px;
-  margin-left: 71px;
-
-  @media (min-width: @tablet-width) {
-    font-size: 36px;
-    margin: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 164px;
-  }
-}
-
 .programs__text {
-  margin-top: 26px;
-  margin-right: 19px;
-  margin-bottom: 23px;
+  margin-top: 22px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 41px;
+    margin-top: 25px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 75px;
+    margin-top: 74px;
     margin-right: 0;
-    margin-bottom: 17px;
+    margin-bottom: 12px;
+  }
+
+  &--pro {
+    @media (min-width: @tablet-width) {
+      margin-right: 35px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 17px;
+    }
   }
 }
 
@@ -149,8 +163,10 @@
   line-height: 20px;
   text-decoration: none;
   display: flex;
-  padding-top: 20px;
   border-top: 1px solid @border-dark;
+  padding-top: 17px;
+  margin-right: 1px;
+  margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -166,10 +182,10 @@
     width: 25px;
     height: 12px;
     left: 95px;
-    bottom: 4px;
+    bottom: 3px;
 
     @media (min-width: @tablet-width) {
-      left: 125px;
+      left: 128px;
     }
   }
 }
