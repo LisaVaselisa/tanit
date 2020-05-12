@@ -5,6 +5,32 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+              <!-- Pixel Glass -->
+<style>
+  html {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /* По умолчанию показывается мобильный макет */
+    background-image: url("../img/pixel-cat-energy-form-mobile.png");
+  }
+  /* Планшет */
+  @media (min-width: 768px) {
+    html {
+      /* Планшетный макет */
+      background-image: url("../img/pixel-cat-energy-form-tablet.png");
+    }
+  }
+  /* Десктоп */
+  @media (min-width: 1300px) {
+    html {
+      /* Десктопный макет */
+      background-image: url("../img/pixel-cat-energy-form-desktop.png");
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+<script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+<!-- // Pixel Glass -->
   </head>
   <body>
     <header class="page-header">
@@ -54,15 +80,15 @@
               <ul class="selection__diet">
                 <li class="selection__diet-item">
                   <label class="selection__diet-label" for="lose" tabindex="0">Похудение</label>
-                  <input class="selection__diet-checkbox" type="radio" id="lose" name="diet" value="lose" checked>
+                  <input class="selection__diet-radio" type="radio" id="lose" name="diet" value="lose" checked>
                 </li>
                 <li class="selection__diet-item">
                   <label class="selection__diet-label" for="gain" tabindex="0">Набор массы</label>
-                  <input class="selection__diet-checkbox" type="radio" id="gain" name="diet" value="gain">
+                  <input class="selection__diet-radio" type="radio" id="gain" name="diet" value="gain">
                 </li>
                 <li class="selection__diet-item">
                   <label class="selection__diet-label" for="advice" tabindex="0">Не знаю (нужен ваш совет)</label>
-                  <input class="selection__diet-checkbox" type="radio" id="advice" name="diet" value="advice">
+                  <input class="selection__diet-radio" type="radio" id="advice" name="diet" value="advice">
                 </li>
               </ul>
             </fieldset>
@@ -102,20 +128,20 @@
             <legend class="selection__name middle-title">Дополнительно</legend>
             <ul class="selection__extra">
               <li class="selection__extra-item">
-                <label class="selection__extra-label" for="sweetener" tabindex="0" checked>Сахарозаменитель</label>
-                <input class="selection__extra-radio" type="checkbox" id="sweetener"name="sweetener" checked>
+                <label class="selection__extra-label" for="sweetener" tabindex="0">Сахарозаменитель</label>
+                <input class="selection__extra-checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
               </li>
               <li class="selection__extra-item">
                 <label class="selection__extra-label" for="water" tabindex="0">Питьевая вода</label>
-                <input class="selection__extra-radio" type="checkbox" id="water" name="water">
+                <input class="selection__extra-checkbox" id="water" type="checkbox" name="water">
               </li>
               <li class="selection__extra-item">
                 <label class="selection__extra-label" for="milk" tabindex="0">Молоко</label>
-                <input class="selection__extra-radio" type="checkbox" id="milk" name="milk">
+                <input class="selection__extra-checkbox" type="checkbox" id="milk" name="milk">
               </li>
               <li class="selection__extra-item">
                 <label class="selection__extra-label" for="vitamin" tabindex="0">Витамины</label>
-                <input class="selection__extra-radio" type="checkbox" id="vitamin" name="vitamin">
+                <input class="selection__extra-checkbox" type="checkbox" id="vitamin" name="vitamin">
               </li>
             </ul>
           </fieldset>
@@ -145,10 +171,7 @@
         </div>
       </section>
       <section class="footer__wrap container">
-        <div class="page-footer__logo">
-          <a class="page-footer__logo-link">
-            <img class="page-footer__logo-img" src="img/logo-footer.svg"  width="128" height="24" alt="Логотип Cat Energy">
-          </a>
+          <div class="adress__map"></div>
         </div>
         <ul class="page-footer__social social-list">
           <li class="social-list__item">

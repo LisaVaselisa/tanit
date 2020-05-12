@@ -4,16 +4,12 @@
 }
 
 .adress__info {
-  padding-top: 31px;
+  padding-top: 28px;
   padding-bottom: 26px;
 
-  &--index {
-    background-color: @bg-white;
-  }
-
   @media (min-width: @tablet-width) {
-    padding-top: 69px;
-    padding-bottom: 62px;
+    padding-top: 63px;
+    padding-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
@@ -25,11 +21,19 @@
     top: calc(20% + 15px);
     right: calc(50% + 40px);
   }
+
+  &--index {
+    @media (max-width: @mobile-width-only) {
+      background-color: @bg-white;
+    }
+  }
 }
 
 .adress__wrap {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 2;
 
   @media (min-width: @desktop-width) {
     width: 570px;
@@ -45,8 +49,8 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 25px;
-    width: 30%;
-    margin-left: 31px;
+    padding-left: 41px;
+    padding-right: 80px;
   }
 
   @media (min-width: @desktop-width) {
@@ -57,15 +61,15 @@
 
 .adress__street {
   line-height: 20px;
-  width: 48.5%;
+  width: 50%;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    width: 26%;
-    margin-right: 32px;
+    padding-right: 41px;
+    padding-left: 150px;
   }
 
   @media (min-width: @desktop-width) {
@@ -78,7 +82,7 @@
 .adress__city {
   @media (min-width: @tablet-width) {
     display: block;
-    margin-top: 10px;
+    margin-top: 19px;
   }
 
   @media (min-width: @desktop-width) {
@@ -88,24 +92,37 @@
 
 .adress__map {
   position: relative;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-position: top center;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/bg-map-desktop@1x.png");
+  }
 
   &::before {
     content: "";
     position: absolute;
-    width: 62px;
-    height: 53px;
     background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
+    width: 62px;
+    height: 53px;
     background-size: 100%;
-    top: calc(50% - 24px);
-    left: calc(50% - 34px);
-
+    top: calc(50% - 42px);
+    left: calc(50% - 30px);
 
     @media (min-width: @tablet-width) {
       width: 113px;
       height: 106px;
-      top: calc(50% - 40px);
-      left: calc(50% - 48px);
+      top: calc(50% - 47px);
+      left: calc(40% + 20px);
     }
 
     @media (min-width: @desktop-width) {
@@ -113,9 +130,4 @@
       left: calc(65% + 50px);
     }
   }
-}
-
-.adress__map-img {
-  display: block;
-  width: 100%;
 }

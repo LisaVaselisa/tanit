@@ -10,10 +10,10 @@
 .site-list__item {
   border-top: 1px solid @border-light;
   padding-top: 24px;
-  padding-bottom: 20px;
-
+  padding-bottom: 21px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 29px;
     border: none;
     width: auto;
     padding-bottom: 20px;
@@ -21,7 +21,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 37px;
+    margin-left: 34px;
   }
 }
 
@@ -41,6 +41,11 @@
     line-height: 25px;
     font-weight: 400;
     color: @dark-title;
+
+    &--active {
+      border-bottom: 2px solid @bg-green;
+      padding-bottom: 7px;
+    }
   }
 
   @media (min-width: @desktop-width) {
