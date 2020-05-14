@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
               <!-- Pixel Glass -->
 <style>
   html {
@@ -33,6 +35,11 @@
 <!-- // Pixel Glass -->
   </head>
   <body>
+
+    <div style="display: none;"></div>
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
         <picture>
@@ -165,7 +172,10 @@
         <div class="adress__map"></div>
       </section>
       <section class="footer__wrap container">
-          <div class="adress__map"></div>
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-link">
+            <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+          </a>
         </div>
         <ul class="page-footer__social social-list">
           <li class="social-list__item">
