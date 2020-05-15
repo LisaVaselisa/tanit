@@ -7,6 +7,7 @@
 }
 
 .copyright__link {
+  font-size: 16px;
   color: @text;
   text-decoration: none;
   display: flex;
@@ -14,14 +15,22 @@
   align-items: center;
   cursor: pointer;
 
-  @media (min-width: @tablet-width) {
-    svg {
-      fill: @icon;
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    fill: @icon;
+    width: 27px;
+    height: 34px;
+
+    &:hover,
+    &:focus {
+      fill: @bg-green;
+    }
+
+    @media (min-width: @tablet-width) {
       margin-left: 23px;
     }
   }
-}
-
-.copyright__logo {
-  font-size: 16px;
 }

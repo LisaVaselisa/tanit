@@ -24,9 +24,22 @@
 .social-list__link {
   display: block;
 
+  svg {
+    fill: @icon;
+
+    &:hover,
+    &:focus {
+      fill: @bg-green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+
   &--vk {
     svg {
-      fill: @icon;
       width: 22px;
       height: 12px;
 
@@ -39,7 +52,6 @@
 
   &--inst {
     svg {
-      fill: @icon;
       width: 17px;
       height: 17px;
 
@@ -52,7 +64,6 @@
 
   &--fb {
     svg {
-      fill: @icon;
       width: 10px;
       height: 19px;
 

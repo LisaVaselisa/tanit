@@ -1,5 +1,8 @@
-.selection__list,
+// Общие свойства
+
+.selection__info,
 .selection__diet,
+.selection__contact,
 .selection__extra {
   font-family: @font-title;
   font-size: 16px;
@@ -14,15 +17,24 @@
   }
 }
 
-.selection__list {
-  padding-top: 25px;
-  padding-bottom: 9px;
+.selection__name {
+  position: relative;
+  background-color: @bg-white;
+  display: block;
+  width: min-content;
+  z-index: 1;
+  padding-top: 28px;
+  padding-left: 20px;
+  margin-left: -20px;
+  padding-right: 21px;
+
+  @media (min-width: @tablet-width) {
+    //padding: 30px 0;
+  }
 }
 
-// Невидимые элементы
-
-.selection__extra-checkbox,
-.selection__diet-radio {
+.selection__extra-input,
+.selection__diet-input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -37,7 +49,10 @@
 
 //Анкета
 
-.selection__list--info {
+.selection__info {
+  padding-top: 22px;
+  padding-bottom: 8px;
+
   @media (min-width: @desktop-width) {
     margin-right: 42px;
   }
@@ -47,18 +62,13 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .selection__label {
   display: flex;
   flex-shrink: 0;
   margin-right: 14px;
-
-  &--contact {
-    margin-right: 11px;
-  }
 }
 
 .selection__input {
@@ -102,10 +112,9 @@
 
 .selection__diet {
   position: relative;
-  border-top: 1px solid @border-light;
-  border-bottom: 1px solid @border-light;
+  border: 1px solid @border-light;
   padding-bottom: 2px;
-  margin: 0;
+  margin-bottom: 0;
 
   @media (max-width: @mobile-width-only) {
     margin-left: -20px;
@@ -121,11 +130,10 @@
 }
 
 .selection__diet-item {
-  position: relative;
   display: flex;
   align-items: center;
   margin-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     padding-left: 60px;
@@ -139,8 +147,9 @@
 }
 
 .selection__diet-label {
-  cursor: pointer;
+  position: relative;
   padding: 0 46px;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -149,9 +158,10 @@
     height: 30px;
     border: 1px solid @border-dark;
     border-radius: 50%;
-    top: -5px;
+    top: -6px;
     left: 0;
     vertical-align: center;
+
 
     @media (min-width: @tablet-width) {
       top: -7px;
@@ -167,45 +177,47 @@
     height: 12px;
     background-color: @bg-green;
     border-radius: 50%;
-    top: 4px;
+    top: 3px;
     left: 9px;
     vertical-align: center;
+    display: none;
 
     @media (min-width: @tablet-width) {
       top: 7px;
       left: 14px;
     }
   }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
+  &:active {
+    color: rgba(34, 34, 34, 0.3);
+
+    &::before {
+      border: 1px solid #bababa;
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
-.selection__diet-radio:checked + .selection__diet-label::after {
+.selection__diet-input:checked + .selection__diet-label::after {
   display: block;
 }
 
 // Контактные данные
 
-.selection__name-contact {
-  position: relative;
-  padding-top: 28px;
-  z-index: 1;
+.selection__contact {
+  padding-top: 18px;
 
-  @media (min-width: @tablet-width) {
-    padding: 30px 0;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 42px;
-    background-color: @bg-green;
-    z-index: 0;
-  }
-}
-
-.selection-contact {
-  margin-top: 9px;
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -213,15 +225,13 @@
   }
 }
 
-.selection__input-mail {
-  @media (min-width: @desktop-width) {
-    padding-right: 295px;
-  }
+.selection__label--contact {
+  margin-right: 10px;
 }
 
-.selection__input-phone {
+.selection__input--mail {
   @media (min-width: @desktop-width) {
-    padding-right: 270px;
+    padding-right: 295px;
   }
 }
 
@@ -236,11 +246,19 @@
   }
 }
 
+.selection__input--phone {
+  padding-left: 14px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 270px;
+  }
+}
+
 .selection__icon-phone {
   position: absolute;
   width: 21px;
   height: 21px;
-  right: 13px;
+  right: 12px;
 
   @media (min-width: @tablet-width) {
     right: 17px;
@@ -286,13 +304,9 @@
 
 //Дополнительные товары
 
-.selection__name-extra {
-  padding-top: 28px;
-}
-
 .selection__extra {
   padding: 0;
-  margin-top: 39px;
+  margin-top: 40px;
   margin-bottom: 43px;
 
   @media (min-width: @tablet-width) {
@@ -344,16 +358,42 @@
     transform: rotate(-45deg);
     border-top-style: none;
     border-right-style: none;
-    top: 3px;
+    top: 5px;
     left: 5px;
+    display: none;
 
     @media (min-width: @tablet-width) {
       top: 5px;
       left: 10px;
     }
   }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
+  &:active {
+    color: rgba(34, 34, 34, 0.3);
+
+    &::before {
+      border: 1px solid #bababa;
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
-.selection__extra-checkbox:checked + .selection__extra-label::after {
+
+.selection__extra-input:checked + .selection__extra-label::after {
   display: block;
+}
+
+.selection__extra-input:disabled + .selection__extra-label {
+  opacity: 0.3;
 }
