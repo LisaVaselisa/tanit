@@ -36,6 +36,14 @@
   display: block;
   text-align: center;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 25px;
@@ -53,6 +61,14 @@
 
     &--index {
       color: @white-text;
+    }
+
+    &--active {
+      border-bottom: 2px solid @bg-green;
+    }
+
+    &--active-index {
+      border-bottom: 2px solid @bg-white;
     }
   }
 }

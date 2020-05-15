@@ -174,7 +174,7 @@
     border: none;
   }
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     background-image: url("../img/icon-right-arrow-long.svg");
@@ -183,9 +183,20 @@
     height: 12px;
     left: 95px;
     bottom: 3px;
+  }
 
-    @media (min-width: @tablet-width) {
-      left: 128px;
-    }
+  &:hover::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 12px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 128px;
   }
 }

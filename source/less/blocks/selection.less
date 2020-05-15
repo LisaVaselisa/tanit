@@ -7,12 +7,16 @@
   color: @dark-title;
   text-transform: uppercase;
   list-style: none;
-  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+.selection__list {
+  padding-top: 25px;
+  padding-bottom: 9px;
 }
 
 // Невидимые элементы
@@ -43,25 +47,49 @@
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .selection__label {
   display: flex;
   flex-shrink: 0;
-  margin-right: 15px;
+  margin-right: 14px;
+
+  &--contact {
+    margin-right: 11px;
+  }
 }
 
 .selection__input {
   border: 1px solid @border-form;
   width: 100%;
-  padding-top: 14px;
-  padding-left: 16px;
-  padding-bottom: 14px;
+  padding: 12px 15px;
+  outline: none;
+
+  &:hover {
+    border: 1px solid @border-dark;
+  }
+
+  &:active {
+    border: 1px solid @text;
+  }
+
+  &:active + svg {
+    fill: @bg-green;
+  }
+
+  &:focus:invalid {
+    border: 1px solid @error;
+  }
+
+  &:focus:invalid + svg {
+    fill: @error;
+  }
+
 
   @media (min-width: @tablet-width) {
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-bottom: 15px;
+    padding: 15px 20px;
   }
 }
 
@@ -76,6 +104,8 @@
   position: relative;
   border-top: 1px solid @border-light;
   border-bottom: 1px solid @border-light;
+  padding-bottom: 2px;
+  margin: 0;
 
   @media (max-width: @mobile-width-only) {
     margin-left: -20px;
@@ -94,9 +124,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding-left: 46px;
-  margin-top: 29px;
-  margin-bottom: 26px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     padding-left: 60px;
@@ -111,6 +140,7 @@
 
 .selection__diet-label {
   cursor: pointer;
+  padding: 0 46px;
 
   &::before {
     position: absolute;
@@ -154,16 +184,29 @@
 
 // Контактные данные
 
-.selection__name {
-  padding: 10px 0;
-  margin-bottom: 11px;
+.selection__name-contact {
+  position: relative;
+  padding-top: 28px;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     padding: 30px 0;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 42px;
+    background-color: @bg-green;
+    z-index: 0;
+  }
 }
 
 .selection-contact {
+  margin-top: 9px;
+
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
@@ -206,13 +249,17 @@
 
 //Комментарии
 
+.selection__name-coment {
+  padding-top: 5px;
+}
+
 .selection__comment {
   display: block;
   width: 100%;
   min-height: 150px;
   border: 1px solid @border-form;
   resize: none;
-  margin: 20px 0;
+  margin-top: 35px;
 
   @media (min-width: @tablet-width) {
     min-height: 196px;
@@ -226,7 +273,7 @@
   color: @text;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 13px;
+  padding-top: 10px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -239,7 +286,15 @@
 
 //Дополнительные товары
 
+.selection__name-extra {
+  padding-top: 28px;
+}
+
 .selection__extra {
+  padding: 0;
+  margin-top: 39px;
+  margin-bottom: 43px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -251,7 +306,7 @@
 }
 
 .selection__extra-item {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -271,7 +326,7 @@
     width: 30px;
     height: 30px;
     border: 1px solid @border-dark;
-    top: 0;
+    top: -2px;
     left: 0;
 
     @media (min-width: @tablet-width) {
