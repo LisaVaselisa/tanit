@@ -1,5 +1,16 @@
 .form {
   margin-top: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 31px;
+  }
+}
+
+.form__block {
+  @media (min-width: @tablet-width) {
+    padding-left: 41px;
+    padding-right: 37px;
+  }
 }
 
 .form__title {
@@ -24,6 +35,8 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: 18px;
+    width: 60%;
   }
 }
 

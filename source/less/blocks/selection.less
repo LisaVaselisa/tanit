@@ -1,5 +1,4 @@
 // Общие свойства
-
 .selection__info,
 .selection__diet,
 .selection__contact,
@@ -29,7 +28,7 @@
   padding-right: 21px;
 
   @media (min-width: @tablet-width) {
-    //padding: 30px 0;
+    padding-top: 65px;
   }
 }
 
@@ -50,8 +49,11 @@
 //Анкета
 
 .selection__info {
-  padding-top: 22px;
-  padding-bottom: 8px;
+  padding: 24px 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 46px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-right: 42px;
@@ -62,13 +64,22 @@
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 15px;
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 19px;
+  }
 }
 
 .selection__label {
   display: flex;
   flex-shrink: 0;
   margin-right: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 17px;
+  }
 }
 
 .selection__input {
@@ -99,7 +110,7 @@
 
 
   @media (min-width: @tablet-width) {
-    padding: 15px 20px;
+    padding: 14px 18px;
   }
 }
 
@@ -113,8 +124,10 @@
 .selection__diet {
   position: relative;
   border: 1px solid @border-light;
-  padding-bottom: 2px;
-  margin-bottom: 0;
+  padding-left: 0;
+  padding-bottom: 3px;
+  margin: 0;
+
 
   @media (max-width: @mobile-width-only) {
     margin-left: -20px;
@@ -125,7 +138,9 @@
 
   @media (min-width: @tablet-width) {
     border: 1px solid @border-light;
-    margin-left: 40px;
+    margin-top: 47px;
+    margin-bottom: 10px;
+
   }
 }
 
@@ -136,8 +151,7 @@
   margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 60px;
-    margin-left: 28px;
+    margin: 33px 27px;
   }
 
   @media (min-width: @desktop-width) {
@@ -150,6 +164,10 @@
   position: relative;
   padding: 0 46px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 
   &::before {
     position: absolute;
@@ -164,9 +182,9 @@
 
 
     @media (min-width: @tablet-width) {
-      top: -7px;
       width: 40px;
       height: 40px;
+      top: -9px;
     }
   }
 
@@ -183,8 +201,10 @@
     display: none;
 
     @media (min-width: @tablet-width) {
-      top: 7px;
-      left: 14px;
+      width: 18px;
+      height: 18px;
+      top: 2px;
+      left: 11px;
     }
   }
 
@@ -216,8 +236,13 @@
 // Контактные данные
 
 .selection__contact {
-  padding-top: 18px;
+  padding-top: 19px;
+  padding-bottom: 2px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 57px;
+    padding-bottom: 0;
+  }
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -227,9 +252,17 @@
 
 .selection__label--contact {
   margin-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
 }
 
 .selection__input--mail {
+  @media (min-width: @tablet-width) {
+    padding-left: 21px;
+  }
+
   @media (min-width: @desktop-width) {
     padding-right: 295px;
   }
@@ -242,12 +275,16 @@
   right: 15px;
 
   @media (min-width: @tablet-width) {
-    right: 20px;
+    right: 19px;
   }
 }
 
 .selection__input--phone {
   padding-left: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 16px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-right: 270px;
@@ -261,15 +298,11 @@
   right: 12px;
 
   @media (min-width: @tablet-width) {
-    right: 17px;
+    right: 16px;
   }
 }
 
 //Комментарии
-
-.selection__name-coment {
-  padding-top: 5px;
-}
 
 .selection__comment {
   display: block;
@@ -277,10 +310,13 @@
   min-height: 150px;
   border: 1px solid @border-form;
   resize: none;
-  margin-top: 35px;
+  margin-top: 34px;
+
 
   @media (min-width: @tablet-width) {
-    min-height: 196px;
+    min-height: 174px;
+    margin-top: 75px;
+    padding: 0;
   }
 }
 
