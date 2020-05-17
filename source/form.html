@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
               <!-- Pixel Glass -->
 <style>
@@ -66,12 +66,14 @@
       <section class="form">
         <div class="container">
           <h1 class="form__title big-title">Подбор программы</h1>
+          <div class="form__wrap">
+            <p class="form__text">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
+          </div>
         </div>
 
         <form class="form__program" action="https://echo.htmlacademy.ru" method="post">
-          <div class="form__wrap container">
-            <div class="form__block">
-              <p class="form__text">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
+          <div class="container">
+            <div class="form__wrap">
               <fieldset class="form__order selection">
                 <legend class="visually-hidden">Информация о коте</legend>
                 <div class="selection__info">
@@ -112,13 +114,13 @@
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <div class="form__block">
-                  <legend class="selection__name middle-title">Контактные&nbsp;данные&nbsp;(владельца&nbsp;кота)</legend>
+                <div class="form__wrap">
+                  <legend class="selection__name selection__name--contact middle-title">Контактные данные (владельца кота)</legend>
                 </div>
               </div>
             </div>
             <div class="container">
-              <div class="form__block">
+              <div class="form__wrap">
                 <div class="selection__contact">
                   <p class="selection__item">
                     <label class="selection__label selection__label--contact" for="mail">E-mail:*</label>
@@ -142,14 +144,14 @@
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <div class="form__block">
+                <div class="form__wrap">
                   <legend class="selection__name middle-title" for="comment">Комментарий</legend>
                 </div>
               </div>
             </div>
             </div>
             <div class="container">
-              <div class="form__block">
+              <div class="form__wrap">
                 <textarea class="selection__comment" name="coment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
 
@@ -159,34 +161,42 @@
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <legend class="selection__name middle-title">Дополнительно</legend>
+                <div class="form__wrap">
+                  <legend class="selection__name middle-title">Дополнительно</legend>
+                </div>
               </div>
             </div>
             <div class="container">
-              <ul class="selection__extra">
-                <li class="selection__extra-item">
-                  <input class="selection__extra-input" type="checkbox" id="sweetener" name="sweetener" checked>
-                  <label class="selection__extra-label" for="sweetener" tabindex="0">Сахарозаменитель</label>
-                </li>
-                <li class="selection__extra-item">
-                  <input class="selection__extra-input" id="water" type="checkbox" name="water">
-                  <label class="selection__extra-label" for="water" tabindex="0">Питьевая вода</label>
-                </li>
-                <li class="selection__extra-item">
-                  <input class="selection__extra-input" type="checkbox" id="milk" name="milk">
-                  <label class="selection__extra-label" for="milk" tabindex="0">Молоко</label>
-                </li>
-                <li class="selection__extra-item">
-                  <input class="selection__extra-input" type="checkbox" id="vitamin" name="vitamin">
-                  <label class="selection__extra-label" for="vitamin" tabindex="0">Витамины</label>
-                </li>
-              </ul>
+              <div class="form__wrap">
+                <ul class="selection__extra">
+                  <li class="selection__extra-item">
+                    <input class="selection__extra-input" type="checkbox" id="sweetener" name="sweetener" checked>
+                    <label class="selection__extra-label" for="sweetener" tabindex="0">Сахарозаменитель</label>
+                  </li>
+                  <li class="selection__extra-item">
+                    <input class="selection__extra-input" id="water" type="checkbox" name="water">
+                    <label class="selection__extra-label" for="water" tabindex="0">Питьевая вода</label>
+                  </li>
+                  <li class="selection__extra-item">
+                    <input class="selection__extra-input" type="checkbox" id="milk" name="milk">
+                    <label class="selection__extra-label" for="milk" tabindex="0">Молоко</label>
+                  </li>
+                  <li class="selection__extra-item">
+                    <input class="selection__extra-input" type="checkbox" id="vitamin" name="vitamin">
+                    <label class="selection__extra-label" for="vitamin" tabindex="0">Витамины</label>
+                  </li>
+                </ul>
+              </div>
             </div>
-
           </fieldset>
-          <div class="form__link container">
-            <button class="form__btn btn" type="submit">Отправить заявку</button>
-            <small class="form__note-text">* — Обязательные поля</small>
+
+          <div class="container">
+            <div class="form__wrap">
+              <div class="form__link">
+                <button class="form__btn btn" type="submit">Отправить заявку</button>
+                <small class="form__note-text">* — Обязательные поля</small>
+              </div>
+            </div>
           </div>
         </form>
       </section>
