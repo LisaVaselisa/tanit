@@ -1,3 +1,14 @@
+.extra {
+  @media (min-width: @tablet-width) {
+    padding-top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 86px;
+  }
+}
+
 .extra__title {
   position: relative;
   display: block;
@@ -13,11 +24,18 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    width: 410px;
-    padding-top: 68px;
+    width: 411px;
+    padding-top: 65px;
     padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 80px;
     margin-left: 0;
-    padding-bottom: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 414px;
+    margin-left: -40px;
+    padding-left: 40px;
   }
 }
 
@@ -25,6 +43,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    box-sizing: content-box;
   }
 }
 
@@ -40,6 +59,7 @@
   @media (min-width: @desktop-width) {
     border-top: 1px solid @border-light;
     border-bottom: 1px solid @border-light;
+    width: 73.4%;
   }
 }
 
@@ -49,13 +69,16 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 27px;
-    padding-right: 37px;
-    padding-left: 37px;
-    padding-bottom: 26px;
+    padding-left: 38px;
+    padding-right: 36px;
+    padding-bottom: 27px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 14px 0;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 16px;
   }
 }
 
@@ -83,7 +106,7 @@
     background-image: url("../img/gift-photo-tablet@1x.jpg");
     width: 100%;
     height: 200px;
-    margin-top: 70px;
+    margin-top: 69px;
     margin-bottom: 76px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -135,7 +158,7 @@
 
   @media (min-width: @tablet-width) {
     text-align: left;
-    padding-top: 74px;
+    padding-top: 72px;
     padding-left: 424px;
     padding-right: 120px;
   }

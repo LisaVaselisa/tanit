@@ -41,21 +41,19 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-
   @media (max-width: @mobile-width-only) {
-    border-top: 1px solid @border-light;
+    border: 1px solid @border-light;
+    padding-left: 19px;
+    padding-right: 19px;
     margin-top: -1px;
     margin-left: -20px;
     margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     border: none;
     width: calc(50% - 30px);
-    padding-bottom: 40px;
     margin-top: 140px;
   }
 
