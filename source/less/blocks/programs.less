@@ -38,7 +38,7 @@
   font-size: 24px;
   line-height: 37px;
   padding-top: 10px;
-  padding-bottom: 7px;
+  padding-bottom: 8px;
   padding-left: 71px;
 
   @media (min-width: @tablet-width) {
@@ -48,7 +48,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 163px;
+    padding-left: 162px;
   }
 
   &::before {
@@ -82,51 +82,47 @@
     background-repeat: no-repeat;
   }
 
-  &--slim {
-    &::after {
-      background-image: url("../img/icon-cat-slim.svg");
-      width: 35px;
-      height: 49px;
-      top: 2px;
-      left: 10px;
+  &--slim::after {
+    background-image: url("../img/icon-cat-slim.svg");
+    width: 35px;
+    height: 49px;
+    top: 2px;
+    left: 10px;
 
-      @media (min-width: @tablet-width) {
-        width: 141px;
-        height: 194px;
-        top: 4px;
-        left: 424px;
-      }
+    @media (min-width: @tablet-width) {
+      width: 141px;
+      height: 194px;
+      top: 4px;
+      left: 424px;
+    }
 
-      @media (min-width: @desktop-width) {
-        width: 71px;
-        height: 97px;
-        top: -37px;
-        left: 13px;
-      }
+    @media (min-width: @desktop-width) {
+      width: 71px;
+      height: 97px;
+      top: -37px;
+      left: 13px;
     }
   }
 
-  &--pro {
-    &::after {
-      background-image: url("../img/icon-cat-pro.svg");
-      width: 67px;
-      height: 28px;
-      top: 15px;
-      left: -7px;
+  &--pro::after {
+    background-image: url("../img/icon-cat-pro.svg");
+    width: 67px;
+    height: 28px;
+    top: 15px;
+    left: -7px;
 
-      @media (min-width: @tablet-width) {
-        width: 268px;
-        height: 113px;
-        top: 58px;
-        left: 360px;
-      }
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 113px;
+      top: 59px;
+      left: 360px;
+    }
 
-      @media (min-width: @desktop-width) {
-        width: 134px;
-        height: 57px;
-        top: -9px;
-        left: -18px;
-      }
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 57px;
+      top: -9px;
+      left: -18px;
     }
   }
 }
@@ -183,6 +179,10 @@
     height: 12px;
     left: 95px;
     bottom: 3px;
+
+    @media (min-width: @tablet-width) {
+      left: 128px;
+    }
   }
 
   &:hover::after {
@@ -194,9 +194,5 @@
 
   &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    left: 128px;
   }
 }

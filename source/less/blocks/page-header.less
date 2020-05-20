@@ -1,24 +1,32 @@
-.page-header {
+.page-header__wrap {
   position: relative;
-  padding-top: 11px;
+  margin: 0 auto;
+
+  @media (max-width: @mobile-width-only) {
+    width: @mobile-width;
+    padding: 0;
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    width: @tablet-width;
     padding: 13px 30px;
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     padding: 44px 40px;
   }
 }
 
 .page-header__logo {
   display: block;
+  padding-top: 11px;
   padding-left: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
 
 
   @media (min-width: @tablet-width) {
@@ -43,8 +51,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 203px;
+    width: 202px;
     height: 60px;
+    margin-top: -1px;
   }
 }
 
@@ -56,8 +65,8 @@
   background-color: transparent;
   width: 25px;
   height: 19px;
-  top: 22px;
-  right: 17px;
+  top: 23px;
+  right: 16px;
   border: none;
   cursor: pointer;
 
