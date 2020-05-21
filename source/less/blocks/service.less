@@ -3,17 +3,19 @@
   font-family: @font-title;
   color: @white-text;
   text-align: center;
+  padding-top: 28px;
+  padding-bottom: 2px;
 
   @media (min-width: @tablet-width) {
     text-align: left;
     color: @title;
-    margin-top: 31px;
-    padding-bottom: 528px;
+    padding-top: 31px;
+    padding-bottom: 529px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
-    padding-bottom: 267px;
+    padding-bottom: 270px;
   }
 
   &::before {
@@ -26,7 +28,7 @@
     display: block;
     width: 100%;
     height: 305px;
-    top: 2px;
+    top: 1px;
     z-index: -1;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -37,25 +39,6 @@
     @media (min-width: @tablet-width) {
       display: none;
     }
-
-    @media (min-width: @desktop-width) {
-      content: "";
-      position: absolute;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: auto 696px;
-      display: block;
-      width: 50%;
-      height: 696px;
-      top: -171px;
-      right: 2px;
-      z-index: -1;
-
-      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
-      }
-    }
   }
 }
 
@@ -63,23 +46,23 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  padding-top: 29px;
-  padding-bottom: 23px;
   margin: 0;
+  margin-bottom: 23px;
+
 
   @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
     width: 66%;
     padding: 0;
-    margin-left: 88px;
+    margin-left: 87px;
     margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 45%;
-    padding-top: 51px;
-    margin-left: 81px;
+    width: 35%;
+    padding-top: 21px;
+    margin-left: 80px;
   }
 }
 
@@ -97,6 +80,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 35%;
     margin-left: 80px;
     margin-bottom: 54px;
   }
@@ -112,7 +96,7 @@
     display: block;
     width: 709px;
     height: 609px;
-    top: 200px;
+    top: 231px;
     z-index: -1;
     margin: 0;
   }
@@ -128,14 +112,14 @@
 .service__btn {
   font-size: 14px;
   line-height: 18px;
-  margin: 2px 0;
+  margin-top: 3px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    padding: 16px 20px;
+    padding: 15px 20px;
     margin-top: 20px;
-    margin-left: 89px;
+    margin-left: 88px;
     margin-right: 374px;
   }
 

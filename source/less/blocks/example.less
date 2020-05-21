@@ -11,30 +11,33 @@
     background: @bg-white;
     border-top: 1px solid @border-light;
     margin: 0;
+  }
 
-    &::before {
+  @media (min-width: @desktop-width) {
+    border: none;
+    padding-top: 35px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
       content: "";
       position: absolute;
       background-image: linear-gradient(to right, @bg-gray 50%, @bg-slider 50%);
+      width: 100%;
+      height: 462px;
       bottom: 0;
       left: 0;
       display: block;
       z-index: -1;
-      height: 462px;
-      width: 100%;
     }
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 33px;
-    border: none;
   }
 }
 
 .example__wrap {
-  position: relative;
-
   @media (min-width: @desktop-width) {
+    position: relative;
+    min-height: 630px;
+
     &::before {
       content: "";
       position: absolute;
@@ -51,28 +54,28 @@
 
 .example__block-info {
   @media (min-width: @tablet-width) {
-    padding-bottom: 70px;
+    padding-bottom: 69px;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
     padding: 0;
   }
 }
 
 .example__title {
   margin: 0;
-  margin-top: 17px;
-  margin-bottom: 23px;
+  margin-top: 16px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
     margin-top: 44px;
-    margin-bottom: 63px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 45%;
     margin-top: 33px;
-    margin-bottom: 147px;
+    margin-bottom: 146px;
   }
 }
 
@@ -80,7 +83,7 @@
   margin-right: 14px;
 
   @media (min-width: @desktop-width) {
-    width: 34.5%;
+    width: 36%;
   }
 }
 
@@ -131,8 +134,8 @@
 .example__total {
   position: relative;
   text-transform: uppercase;
-  padding-top: 13px;
-  padding-bottom: 17px;
+  padding-top: 14px;
+  padding-bottom: 16px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
@@ -147,6 +150,7 @@
 }
 
 .example__total-text {
+  content: "";
   position: absolute;
   font-size: 12px;
   line-height: 12px;
@@ -188,13 +192,13 @@
     line-height: 20px;
     text-align: right;
     width: 174px;
-    margin-top: 39px;
+    margin-top: 38px;
     margin-bottom: 27px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
-    width: 100%;
+    width: 40%;
     margin-top: 44px;
   }
 }
@@ -215,6 +219,7 @@
 .example__slider-wrap {
   width: max-content;
   margin-left: -20px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -223,7 +228,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 552px;
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 0;
   }
 }
 
@@ -242,39 +250,40 @@
   @media (min-width: @desktop-width) {
     left: 18px;
   }
-}
 
-.example__slider-photo--before {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    top: 0;
-    width: 338px;
-    z-index: 2;
-    background-image: linear-gradient(to top, @bg-gray 354px, @bg-white 354px);
-    overflow: hidden;
+  &--after {
+    width: 0;
+
+    @media (min-width: @tablet-width) {
+      position: relative;
+      width: 100%;
+      z-index: 1;
+      background-image: linear-gradient(to top, @bg-slider 354px, @bg-white 354px);
+      overflow: hidden;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: linear-gradient(to top, @bg-slider 63.3%, @bg-white 63.3%);
+      top: -22px;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    width: 365px;
-    background-image: linear-gradient(to top, @bg-gray 62.6%, @bg-white 62.6%);
-    margin-top: -26px;
-  }
-}
+  &--before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 338px;
+      z-index: 2;
+      background-image: linear-gradient(to top, @bg-gray 354px, @bg-white 354px);
+      overflow: hidden;
+    }
 
-.example__slider-photo--after {
-  width: 0;
-
-  @media (min-width: @tablet-width) {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    background-image: linear-gradient(to top, @bg-slider 354px, @bg-white 354px);
-    overflow: hidden;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-image: linear-gradient(to top, @bg-slider 62.6%, @bg-white 62.6%);
-    top: -26px;
+    @media (min-width: @desktop-width) {
+      width: 365px;
+      background-image: linear-gradient(to top, @bg-gray 63.3%, @bg-white 63.3%);
+      margin-top: -22px;
+    }
   }
 }
 
@@ -283,7 +292,6 @@
   justify-content: center;
   align-items: center;
   margin-left: 3px;
-  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     margin-top: 7px;
@@ -291,6 +299,7 @@
 
   @media (min-width: @desktop-width) {
     justify-content: flex-end;
+    margin-top: 6px;
   }
 }
 

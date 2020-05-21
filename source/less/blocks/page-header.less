@@ -1,3 +1,39 @@
+.page-header {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 13px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 43px 0;
+  }
+
+  &--index {
+    @media (min-width: @desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-color: @bg-photo;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: auto 696px;
+        display: block;
+        width: 50%;
+        height: 696px;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+        }
+      }
+    }
+  }
+}
+
 .page-header__wrap {
   position: relative;
   margin: 0 auto;
@@ -13,12 +49,14 @@
     flex-wrap: wrap;
     align-items: center;
     width: @tablet-width;
-    padding: 13px 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    padding: 44px 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -57,9 +95,15 @@
   }
 }
 
+.page-header__menu {
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
+}
+
 .page-header__toggle {
-  position: absolute;
   content: "";
+  position: absolute;
   background-image: url("../img/icon-close.svg");
   background-repeat: no-repeat;
   background-color: transparent;
@@ -83,5 +127,6 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    justify-content: flex-end;
   }
 }
