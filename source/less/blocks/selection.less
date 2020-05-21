@@ -64,6 +64,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
+    padding-bottom: 25px;
   }
 
   @media (min-width: @desktop-width) {
@@ -76,7 +77,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 14px;
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
@@ -84,7 +85,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 18px;
+    margin-top: 19px;
 
     &--info {
       width: 100%;
@@ -105,11 +106,15 @@
 .selection__input {
   border: 1px solid @border-form;
   width: 100%;
-  padding: 12px 15px;
+  height: 45px;
+  padding: 0 15px;
   outline: none;
+  appearance: textfield;
+
 
   @media (min-width: @tablet-width) {
-    padding: 14px 18px;
+    height: 52px;
+    padding: 0 18px;
   }
 
   &:hover {
@@ -258,7 +263,7 @@
   padding-bottom: 2px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 57px;
+    padding-top: 58px;
     padding-bottom: 0;
   }
 
@@ -306,7 +311,7 @@
   right: 15px;
 
   @media (min-width: @tablet-width) {
-    right: 20px;
+    right: 19px;
   }
 }
 
@@ -357,13 +362,16 @@
   min-height: 150px;
   border: 1px solid @border-form;
   resize: none;
-  padding: 11px 14px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 14px;
+  padding-right: 13px;
   margin-top: 34px;
 
 
   @media (min-width: @tablet-width) {
     min-height: 174px;
-    padding: 10px 17px;
+    padding: 9px 17px;
     margin-top: 77px;
   }
 
@@ -391,17 +399,17 @@
 .selection__extra {
   padding: 0;
   margin-top: 40px;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     margin-top: 66px;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 19px;
+    margin-bottom: 18px;
   }
 }
 
@@ -446,7 +454,10 @@
   padding: 2px 46px;
 
   @media (min-width: @tablet-width) {
-    padding: 4px 58px;
+    padding-top: 4px;
+    padding-left: 59px;
+    padding-right: 20px;
+    padding-bottom: 4px;
   }
 
   &::before {
@@ -511,4 +522,22 @@
 
 .selection__extra-input:disabled + .selection__extra-label {
   opacity: 0.3;
+}
+
+//Кроссбраузерность
+//-------------------
+
+//Убираем стрелки
+::-webkit-contacts-auto-fill-button,
+::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+//Убираем иконку пользователя
+::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
 }

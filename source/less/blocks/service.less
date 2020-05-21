@@ -29,7 +29,7 @@
     width: 100%;
     height: 305px;
     top: 1px;
-    z-index: -1;
+    z-index: 1;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-background-mobile@2x.jpg");
@@ -40,6 +40,44 @@
       display: none;
     }
   }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      background-position: top center;
+      background-repeat: no-repeat;
+      height: 709px;
+      display: block;
+      top: 230px;
+      left: 0;
+      right: 0;
+      z-index: 2;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-tablet@2x.jpg");
+        background-size: 709px auto;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/index-can-desktop@1x.png");
+      height: 499px;
+      top: -28px;
+      left: 230px;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+        background-size: 550px auto;
+      }
+    }
+  }
+}
+
+.service__wrap {
+  position: relative;
+  z-index: 3;
 }
 
 .service__title {
@@ -91,21 +129,7 @@
   margin-top: 27px;
 
   @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 709px;
-    height: 609px;
-    top: 231px;
-    z-index: -1;
-    margin: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 552px;
-    height: 499px;
-    top: -29px;
-    left: calc(50% - 160px);
+    display: none;
   }
 }
 
@@ -115,12 +139,14 @@
   margin-top: 3px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     font-size: 20px;
     line-height: 20px;
     padding: 15px 20px;
-    margin-top: 20px;
+    margin-top: 21px;
     margin-left: 88px;
     margin-right: 374px;
+    z-index: 4;
   }
 
   @media (min-width: @desktop-width) {
