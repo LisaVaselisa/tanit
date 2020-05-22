@@ -12,33 +12,6 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.js" async=""></script>
-
-              <!-- Pixel Glass -->
-<style>
-  html {
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    /* По умолчанию показывается мобильный макет */
-    background-image: url("../img/pixel-cat-energy-form-mobile.png");
-  }
-  /* Планшет */
-  @media (min-width: 768px) {
-    html {
-      /* Планшетный макет */
-      background-image: url("../img/pixel-cat-energy-form-tablet.png");
-    }
-  }
-  /* Десктоп */
-  @media (min-width: 1300px) {
-    html {
-      /* Десктопный макет */
-      background-image: url("../img/pixel-cat-energy-form-desktop.png");
-    }
-  }
-</style>
-<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-<script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-<!-- // Pixel Glass -->
   </head>
   <body>
     <div style="display: none;">
@@ -69,14 +42,14 @@
       <section class="form">
         <div class="container">
           <h1 class="form__title big-title">Подбор программы</h1>
-          <div class="form__wrap">
+          <div class="form-wrap">
             <p class="form__text">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
           </div>
         </div>
 
         <form class="form__program" action="https://echo.htmlacademy.ru" method="post">
           <div class="container">
-            <div class="form__wrap">
+            <div class="form-wrap">
               <fieldset class="form__order selection">
                 <legend class="visually-hidden">Информация о коте</legend>
                 <div class="selection__info">
@@ -117,13 +90,13 @@
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <div class="form__wrap">
-                  <legend class="selection__name selection__name--contact middle-title">Контактные данные (владельца кота)</legend>
+                <div class="form-wrap">
+                  <h2 class="selection__name selection__name--contact middle-title">Контактные данные (владельца кота)</h2>
                 </div>
               </div>
             </div>
             <div class="container">
-              <div class="form__wrap">
+              <div class="form-wrap">
                 <div class="selection__contact">
                   <p class="selection__item">
                     <label class="selection__label selection__label--mail" for="mail">E-mail:*</label>
@@ -147,30 +120,28 @@
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <div class="form__wrap">
-                  <legend class="selection__name middle-title" for="comment">Комментарий</legend>
+                <div class="page-form-wrap">
+                  <h2 class="selection__name middle-title">Комментарий</h2>
                 </div>
               </div>
             </div>
-            </div>
             <div class="container">
-              <div class="form__wrap">
+              <div class="form-wrap">
                 <textarea class="selection__comment" name="coment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
-
             </div>
           </fieldset>
 
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <div class="form__wrap">
-                  <legend class="selection__name middle-title">Дополнительно</legend>
+                <div class="form-wrap">
+                  <h2 class="selection__name middle-title">Дополнительно</h2>
                 </div>
               </div>
             </div>
             <div class="container">
-              <div class="form__wrap">
+              <div class="form-wrap">
                 <ul class="selection__extra">
                   <li class="selection__extra-item">
                     <input class="selection__extra-input" type="checkbox" id="sweetener" name="sweetener" checked>
@@ -194,7 +165,7 @@
           </fieldset>
 
           <div class="container">
-            <div class="form__wrap">
+            <div class="form-wrap">
               <div class="form__link">
                 <button class="form__btn btn" type="submit">Отправить заявку</button>
                 <small class="form__note-text">* — Обязательные поля</small>
@@ -218,12 +189,11 @@
           <iframe class="adress__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.9750205566963!2d30.322076840808084!3d59.938765264719976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1586253181213!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0" aria-label="Интерактивная карта"></iframe>
         </div>
       </section>
-      <section class="footer__wrap container">
-        <div class="page-footer__logo">
-          <a class="page-footer__logo-link">
-            <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
-          </a>
-        </div>
+      <section class="page-footer__wrap container">
+        <h2 class="visually-hidden">Раздел контактов и ссылок на нас</h2>
+        <a class="page-footer__logo-link">
+          <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+        </a>
         <ul class="page-footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Вконтакте">

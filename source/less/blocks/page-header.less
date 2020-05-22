@@ -17,7 +17,7 @@
         background-image: url("../img/index-background-desktop@1x.jpg");
         background-color: @bg-photo;
         background-repeat: no-repeat;
-        background-position: left top;
+        background-position: right top;
         background-size: auto 696px;
         display: block;
         width: 50%;
@@ -72,6 +72,10 @@
   }
 }
 
+.page-footer__logo-link {
+  height: 24px;
+}
+
 .page-header__logo-img {
   display: block;
 
@@ -113,6 +117,7 @@
   right: 16px;
   border: none;
   cursor: pointer;
+  display: none;
 
   @media (min-width: @tablet-width) {
     display: none;

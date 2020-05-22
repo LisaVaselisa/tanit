@@ -12,34 +12,6 @@
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.js" async=""></script>
-
-      <!-- Pixel Glass -->
-<style>
-  html {
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    /* По умолчанию показывается мобильный макет */
-    background-image: url("../img/pixel-cat-energy-index-mobile-menu.png");
-  }
-  /* Планшет */
-  @media (min-width: 768px) {
-    html {
-      /* Планшетный макет */
-      background-image: url("../img/pixel-cat-energy-index-tablet.png");
-    }
-  }
-  /* Десктоп */
-  @media (min-width: 1300px) {
-    html {
-      /* Десктопный макет */
-      background-image: url("../img/pixel-cat-energy-index-desktop.png");
-    }
-  }
-</style>
-<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-<script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
-<!-- // Pixel Glass -->
-
   </head>
   <body>
     <div style="display: none;">
@@ -118,7 +90,7 @@
               Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
             <div class="example__list-wrap">
-              <dl class="example__list">
+              <div class="example__list">
                 <div class="example__item">
                   <p class="example__total middle-title">5 кг</p>
                   <p class="example__total-text">снижение веса</p>
@@ -127,7 +99,7 @@
                   <p class="example__total middle-title">60 дней</p>
                   <p class="example__total-text">затрачено времени</p>
                 </div>
-              </dl>
+              </div>
               <p class="example__cost-food"><span class="example__span">Затраты на питание:</span>
                 <span>15 000 руб.</span></p>
             </div>
@@ -159,7 +131,7 @@
             <div class="example__slider-range">
               <button class="example__range-btn" type="button">Было</button>
               <div class="example__slider-bar">
-                <div class="example__slider-scale" tabindex="0" aria-label="Бегунок для просмотра слайдера">
+                <div class="example__slider-scale" tabindex="0">
                 </div>
               </div>
               <button class="example__range-btn" type="button">Стало</button>
@@ -167,9 +139,6 @@
           </div>
         </div>
       </section>
-
-
-
     </main>
     <footer class="page-footer">
       <section class="adress">
@@ -184,12 +153,11 @@
           <iframe class="adress__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.9750205566963!2d30.322076840808084!3d59.938765264719976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1586253181213!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0" aria-label="Интерактивная карта"></iframe>
         </div>
       </section>
-      <section class="footer__wrap container">
-        <div class="page-footer__logo">
-          <a class="page-footer__logo-link">
-            <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
-          </a>
-        </div>
+      <section class="page-footer__wrap container">
+        <h2 class="visually-hidden">Раздел контактов и ссылок на нас</h2>
+        <a class="page-footer__logo-link">
+          <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Cat Energy">
+        </a>
         <ul class="page-footer__social social-list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy" target="_blank" aria-label="Вконтакте">

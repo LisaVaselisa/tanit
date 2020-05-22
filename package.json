@@ -41,7 +41,7 @@
     "*.json",
     "*.js",
     "source/*.html",
-    "source/js/**/*.js",
+    "source/js/**/*.js,!source/js/picturefill.js",
     "source/img/**/*.svg",
     "source/less/**/*.less"
   ],
