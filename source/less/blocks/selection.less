@@ -38,7 +38,7 @@
     padding-right: 41px;
 
     &--contact {
-      width: 593px;
+      width: 594px;
     }
   }
 }
@@ -109,8 +109,6 @@
   height: 45px;
   padding: 0 15px;
   outline: none;
-  appearance: textfield;
-
 
   @media (min-width: @tablet-width) {
     height: 52px;
@@ -263,7 +261,7 @@
   padding-bottom: 2px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 58px;
+    padding-top: 57px;
     padding-bottom: 0;
   }
 
@@ -308,9 +306,11 @@
   position: absolute;
   width: 18px;
   height: 14px;
+  top: 15px;
   right: 15px;
 
   @media (min-width: @tablet-width) {
+    top: 19px;
     right: 19px;
   }
 }
@@ -343,14 +343,17 @@
   position: absolute;
   width: 21px;
   height: 21px;
-  right: 12px;
+  top: 13px;
+  right: 13px;
+
 
   @media (min-width: @tablet-width) {
+    top: 17px;
     right: 16px;
   }
 
   @media (min-width: @desktop-width) {
-    right: 18px;
+    right: 19px;
   }
 }
 
@@ -373,6 +376,7 @@
     min-height: 174px;
     padding: 9px 17px;
     margin-top: 77px;
+    margin-bottom: 1px;
   }
 
   @media (min-width: @desktop-width) {
@@ -404,8 +408,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 66px;
-    margin-bottom: 13px;
+    margin-top: 67px;
+    margin-bottom: 11px;
   }
 
   @media (min-width: @desktop-width) {
@@ -540,4 +544,23 @@
   pointer-events: none;
   position: absolute;
   right: 0;
+}
+
+// Фиксирование цвета placeholder для Firefox 19+ and Firefox 18-
+::-moz-placeholder {
+  opacity: 1;
+}
+
+// Фиксирование цвета placeholder для IE
+:-ms-input-placeholder {
+  font-family: @font-title;
+  color: @text;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

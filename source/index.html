@@ -7,6 +7,11 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async=""></script>
 
       <!-- Pixel Glass -->
 <style>
@@ -106,54 +111,65 @@
       </section>
       <section class="example">
         <div class="example__wrap container">
-          <div class="example__block-info">
-            <h2 class="example__title big-title">Живой пример</h2>
-            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="example__info">
+            <h3 class="example__title big-title">Живой пример</h3>
+            <p class="example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
             <div class="example__list-wrap">
-              <ul class="example__list">
-                <li class="example__item">
+              <dl class="example__list">
+                <div class="example__item">
                   <p class="example__total middle-title">5 кг</p>
                   <p class="example__total-text">снижение веса</p>
-                </li>
-                <li class="example__item">
+                </div>
+                <div class="example__item">
                   <p class="example__total middle-title">60 дней</p>
                   <p class="example__total-text">затрачено времени</p>
-                </li>
-              </ul>
-              <p class="example__cost-text">Затраты на питание: <span class="example__span">15 000 руб.</span></p>
+                </div>
+              </dl>
+              <p class="example__cost-food"><span class="example__span">Затраты на питание:</span>
+                <span>15 000 руб.</span></p>
             </div>
           </div>
           <div class="example__slider-wrap">
-            <div class="example__slider-photo example__slider-photo--before">
-              <picture>
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фото кота до упоребления Кэт энерджи">
-              </picture>
+            <div class="example__slider-block">
+              <div class="example__slider-img example__slider-img--before">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="example__img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Фото кота до упоребления Кэт энерджи">
+                </picture>
+              </div>
+              <div class="example__slider-img example__slider-img--after">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="example__img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="232" alt="Фото кота после упоребления Кэт энерджи">
+                </picture>
+              </div>
             </div>
-            <div class="example__slider-photo example__slider-photo--after">
-              <picture>
-                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото кота после упоребления Кэт энерджи">
-              </picture>
-            </div>
+
             <div class="example__slider-range">
               <button class="example__range-btn" type="button">Было</button>
               <div class="example__slider-bar">
-                <div class="example__slider-scale"></div>
+                <div class="example__slider-scale" tabindex="0" aria-label="Бегунок для просмотра слайдера">
+                </div>
               </div>
               <button class="example__range-btn" type="button">Стало</button>
             </div>
           </div>
         </div>
       </section>
+
+
+
     </main>
     <footer class="page-footer">
       <section class="adress">
@@ -164,7 +180,9 @@
             <p class="adress__street">ул. Большая Конюшенная, д. 19/8 <span class="adress__city">Санкт-Петербург</span></p>
           </div>
         </div>
-        <div class="adress__map"></div>
+        <div class="adress__map">
+          <iframe class="adress__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.9750205566963!2d30.322076840808084!3d59.938765264719976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1586253181213!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0" aria-label="Интерактивная карта"></iframe>
+        </div>
       </section>
       <section class="footer__wrap container">
         <div class="page-footer__logo">

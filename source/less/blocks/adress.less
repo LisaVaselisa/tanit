@@ -15,7 +15,7 @@
   @media (min-width: @desktop-width) {
     content: "";
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     background-color: @bg-white;
     width: 570px;
     top: calc(20% + 15px);
@@ -94,19 +94,17 @@
   background-repeat: no-repeat;
   background-size: 320px auto;
   background-position: 50% -38px;
-  height: 362px;
   width: 100%;
-
+  height: 362px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.png");
-    background-size: 320px auto;
   }
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/bg-map-tablet@1x.png");
-    background-position: 50% -3px;
     background-size: 768px auto;
+    background-position: 50% -3px;
     height: 400px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -117,6 +115,7 @@
   @media (min-width: @desktop-width) {
     background-image: url("../img/bg-map-desktop@1x.png");
     background-size: 1446px auto;
+    z-index: 1;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.png");
@@ -147,4 +146,13 @@
       left: calc(70% + 18px);
     }
   }
+}
+
+.adress__iframe {
+  position: relative;
+  z-index: 3;
+  background-color: @bg-gray;
+  height: 100%;
+  width: 100%;
+  border: none;
 }

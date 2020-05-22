@@ -1,341 +1,330 @@
 .example {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   background-color: @bg-gray;
-  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 37px;
 
   @media (min-width: @tablet-width) {
-    z-index: 0;
-    background: @bg-white;
+    background-color: @bg-white;
     border-top: 1px solid @border-light;
-    margin: 0;
-  }
+    padding-top: 20px;
+    padding-bottom: 79px;
+    z-index: 1;
 
-  @media (min-width: @desktop-width) {
-    border: none;
-    padding-top: 35px;
-  }
+    @media (min-width: @desktop-width) {
+      border-top: none;
+      padding-top: 14px;
+      padding-bottom: 0;
+    }
 
-  &::before {
-    @media (min-width: @tablet-width) {
+    &::before {
       content: "";
       position: absolute;
-      background-image: linear-gradient(to right, @bg-gray 50%, @bg-slider 50%);
-      width: 100%;
-      height: 462px;
-      bottom: 0;
-      left: 0;
       display: block;
+      width: 100%;
+      height: 463px;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, @bg-gray 50%, #eaeaea 50%);
       z-index: -1;
+
+      @media (min-width: @desktop-width) {
+        height: 460px;
+      }
     }
   }
 }
 
 .example__wrap {
-  @media (min-width: @desktop-width) {
-    position: relative;
-    min-height: 630px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: linear-gradient(to right, @bg-gray 75%, @bg-slider 75%);
-      bottom: 0;
-      left: 0;
-      display: block;
-      z-index: -1;
-      height: 462px;
-      width: 100%;
-    }
-  }
-}
-
-.example__block-info {
-  @media (min-width: @tablet-width) {
-    padding-bottom: 69px;
-  }
+  position: relative;
+  z-index: 2;
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .example__title {
-  margin: 0;
-  margin-top: 16px;
-  margin-bottom: 24px;
+  margin-top: 0;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 44px;
+    width: 450px;
+    margin-top: 23px;
     margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 45%;
-    margin-top: 33px;
     margin-bottom: 146px;
+    margin-top: 54px;
   }
 }
 
 .example__text {
-  margin-right: 14px;
+  margin-right: 13px;
+  margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 37px;
+  }
 
   @media (min-width: @desktop-width) {
-    width: 36%;
+    width: 439px;
+    margin-bottom: 53px;
   }
 }
 
 .example__list-wrap {
-  margin-top: 25px;
+  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 57px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
+    margin-bottom: 0;
   }
 }
 
 .example__list {
+  text-align: center;
   display: flex;
   justify-content: space-between;
-  list-style: none;
-  padding: 0;
+  margin-bottom: 34px;
 
-  @media (min-width: @tablet-width) {
-    justify-content: flex-start;
-  }
 
   @media (min-width: @desktop-width) {
-    margin-top: 31px;
+    width: 407px;
+    margin-bottom: 37px;
   }
 }
 
 .example__item {
-  position: relative;
   width: 124px;
-  min-height: 56px;
-  border: 1px solid @border-dark;
+  border: 1px solid #cfcfcf;
   border-radius: 3px;
-  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    width: 162px;
-    margin-top: 12px;
-    margin-right: 42px;
+    margin-right: 40px;
+    width: 163px;
   }
 }
 
 .example__total {
-  position: relative;
   text-transform: uppercase;
-  padding-top: 14px;
-  padding-bottom: 16px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
-    padding-top: 13px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 20px;
+    padding-bottom: 2px;
   }
 }
 
 .example__total-text {
-  content: "";
-  position: absolute;
   font-size: 12px;
   line-height: 12px;
-  text-align: center;
-  top: 46px;
-  left: 0;
-  right: 0;
   background-color: @bg-gray;
-  margin: 0 20px;
+  margin-top: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: -30px;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    background: @bg-white;
-    top: 62px;
-    width: 100%;
-    padding: 0 7px;
-    margin: auto;
+    background-color: @bg-white;
+    margin-bottom: -21px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   @media (min-width: @desktop-width) {
     background-color: @bg-gray;
-    top: 63px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
-.example__cost-text {
+.example__cost-food {
   font-family: @font-title;
   font-size: 14px;
   line-height: 20px;
   color: @title;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 33px;
-  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    width: 190px;
     text-align: right;
-    width: 174px;
-    margin-top: 38px;
-    margin-bottom: 27px;
+    padding-top: 5px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: left;
-    width: 40%;
-    margin-top: 44px;
+    width: 370px;
+    padding-top: 4px;
   }
 }
 
 .example__span {
   @media (min-width: @tablet-width) {
-    display: block;
-    margin-top: 10px;
+    display: inline-block;
+    padding-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
-    display: inline-block;
-    padding-left: 60px;
-    margin: 0;
+    margin-right: 60px;
   }
 }
 
 .example__slider-wrap {
-  width: max-content;
-  margin-left: -20px;
-  margin-bottom: 35px;
-
   @media (min-width: @tablet-width) {
     position: relative;
-    min-height: 632px;
-    margin: auto;
   }
 
   @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    right: 18px;
-    bottom: 0;
+    align-self: flex-end;
   }
 }
 
-.example__slider-photo {
-  display: block;
-  margin-bottom: 5px;
+.example__slider-block {
+  position: relative;
+  margin-left: 17px;
 
-  @media (min-width: @tablet-width) {
-    left: 7px;
+  @media (min-width: @desktop-width) {
+    margin-right: -40px;
+  }
+}
 
-    img {
-      max-width: none;
-    }
+.example__slider-img {
+  @media (max-width: @mobile-width-only) {
+    background-color: @bg-gray;
   }
 
   @media (min-width: @desktop-width) {
-    left: 18px;
+    padding-bottom: 133px;
+  }
+}
+
+.example__slider-img--after {
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to top, #eaeaea 384px, @bg-white 384px);
+    overflow: hidden;
   }
 
-  &--after {
-    width: 0;
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to top, #eaeaea 460px, @bg-white 460px);
+    overflow: hidden;
+  }
+}
 
-    @media (min-width: @tablet-width) {
-      position: relative;
-      width: 100%;
-      z-index: 1;
-      background-image: linear-gradient(to top, @bg-slider 354px, @bg-white 354px);
-      overflow: hidden;
-    }
+.example__slider-img--before {
+  position: absolute;
 
-    @media (min-width: @desktop-width) {
-      background-image: linear-gradient(to top, @bg-slider 63.3%, @bg-white 63.3%);
-      top: -22px;
-    }
+  @media (min-width: @tablet-width) {
+    width: 338px;
+    background-image: linear-gradient(to top, @bg-gray 384px, @bg-white 384px);
+    overflow: hidden;
   }
 
-  &--before {
-    @media (min-width: @tablet-width) {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 338px;
-      z-index: 2;
-      background-image: linear-gradient(to top, @bg-gray 354px, @bg-white 354px);
-      overflow: hidden;
-    }
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(to top, @bg-gray 460px, @bg-white 450px);
+    overflow: hidden;
+  }
+}
+
+.example__img {
+  display: block;
+  max-width: none;
+  margin-left: -33px;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 690px;
+    margin-left: 0;
+    margin-bottom: 32px;
 
     @media (min-width: @desktop-width) {
-      width: 365px;
-      background-image: linear-gradient(to top, @bg-gray 63.3%, @bg-white 63.3%);
-      margin-top: -22px;
+      margin-left: -25px;
+      margin-bottom: 0;
     }
   }
 }
 
 .example__slider-range {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-left: 3px;
+  min-width: 247px;
+  padding-left: 38px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
 
   @media (min-width: @tablet-width) {
-    margin-top: 7px;
+    position: absolute;
+    bottom: -4px;
+    left: 29px;
+    width: 615px;
   }
 
   @media (min-width: @desktop-width) {
-    justify-content: flex-end;
-    margin-top: 6px;
+    bottom: 74px;
+    left: 32px;
   }
 }
 
 .example__slider-bar {
+  position: relative;
   width: 84px;
   height: 14px;
   border: 1px solid @border-dark;
-  border-radius: 6px;
+  border-radius: 10px;
   background-color: @bg-white;
+  margin: 0 10px;
 
   @media (min-width: @tablet-width) {
-    background-color: @border-dark;
-    border-radius: 2.5px;
-    width: 428px;
+    width: 430px;
     height: 6px;
+    border: none;
+    background-color: #dcdcdc;
+    margin: 0 15px;
   }
 }
 
 .example__slider-scale {
-  width: 35px;
-  height: 5px;
+  width: 43%;
+  height: 6px;
   background-color: @bg-green;
-  border-radius: 3px;
-  margin: 3px 6px;
-  border: none;
+  border-radius: 10px;
+  margin: 3px 5px;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
     box-sizing: content-box;
+    position: absolute;
+    top: -16px;
+    left: 46%;
     width: 8px;
     height: 8px;
     background-color: @bg-green;
     border: 13px solid @bg-white;
     border-radius: 50%;
     box-shadow: 0 0 0 1px @border-dark, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-    margin: -16px auto;
 
     &:hover {
       box-shadow: 0 0 0 1px @border-dark, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
@@ -354,23 +343,22 @@
   text-transform: uppercase;
   background-color: transparent;
   border: none;
-  padding: 0;
   cursor: pointer;
-  margin-right: 16px;
-  margin-left: 20px;
+  padding: 0;
+  margin: 0 7px;
 
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    border-bottom: 1px dotted @border-dark;
-    padding: 6px 0;
-    margin-right: 23px;
-  }
-
-  &:hover {
+  &:hover,
+  &:focus {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   }
 
   &:active {
-    border-color: transparent;
+    border-bottom: transparent;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    border-bottom: 1px dotted @border-dark;
+    margin: 0 4px;
   }
 }

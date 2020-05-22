@@ -24,7 +24,7 @@
         height: 696px;
         top: 0;
         right: 0;
-        z-index: -1;
+        z-index: 1;
 
         @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
           background-image: url("../img/index-background-desktop@2x.jpg");
@@ -128,5 +128,10 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    z-index: 2;
   }
 }
