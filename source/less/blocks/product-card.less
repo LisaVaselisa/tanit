@@ -9,10 +9,10 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-left: none;
     border-right: none;
     border-top: none;
-    width: 895px;
   }
 }
 
@@ -20,10 +20,16 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
   }
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -32,16 +38,18 @@
   line-height: 16px;
   color: @dark-title;
   margin-top: 0;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 20px;
     width: 50%;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
-    margin: auto;
+    line-height: 20px;
+    vertical-align: center;
+    width: 150px;
   }
 }
 
@@ -49,51 +57,61 @@
   font-size: 14px;
   line-height: 14px;
   border-collapse: collapse;
-  padding: 0;
-  margin-bottom: 13px;
   width: 100%;
+  padding: 0;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
     display: flex;
     justify-content: flex-end;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
-    margin: auto;
-    padding-right: 39px;
+    justify-content: space-between;
+    width: auto;
+    margin-right: 32px;
   }
 }
 
 .product-card__value {
   text-align: left;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     padding-right: 45px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 180px;
+    display: inline-block;
+    width: 160px;
+    padding-right: 83px;
   }
 }
 
 .product-card__cost {
   text-align: right;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     width: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    display: inline-block;
+    width: 47px;
   }
 }
 
 .product-card__btn {
   color: @white-text;
   width: 100%;
-  padding: 13px;
+
 
   @media (min-width: @desktop-width) {
-    width: 245px;
-    align-self: center;
+    width: 32.2%;
   }
 }

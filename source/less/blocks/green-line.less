@@ -1,0 +1,19 @@
+.green-line {
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: @bg-green;
+    top: 41px;
+    right: 0;
+
+    @media (min-width: @tablet-width) {
+      top: 87px;
+      width: 100%;
+    }
+  }
+}

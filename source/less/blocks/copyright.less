@@ -1,5 +1,5 @@
 .copyright {
-  padding: 21px 0;
+  padding: 18px 0;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -7,21 +7,32 @@
 }
 
 .copyright__link {
+  font-size: 16px;
   color: @text;
   text-decoration: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  margin: 5px 0;
+  overflow: hidden;
 
-  @media (min-width: @tablet-width) {
-    svg {
-      fill: @icon;
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    fill: @icon;
+    width: 27px;
+    height: 34px;
+
+    &:hover,
+    &:focus {
+      fill: @bg-green;
+    }
+
+    @media (min-width: @tablet-width) {
       margin-left: 23px;
     }
   }
-}
-
-.copyright__logo {
-  font-size: 16px;
 }

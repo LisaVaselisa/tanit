@@ -1,5 +1,7 @@
-.selection__list,
+// Общие свойства
+.selection__info,
 .selection__diet,
+.selection__contact,
 .selection__extra {
   font-family: @font-title;
   font-size: 16px;
@@ -7,7 +9,6 @@
   color: @dark-title;
   text-transform: uppercase;
   list-style: none;
-  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -15,10 +16,37 @@
   }
 }
 
-// Невидимые элементы
+.selection__name {
+  position: relative;
+  background-color: @bg-white;
+  display: block;
+  width: min-content;
+  z-index: 1;
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 21px;
+  margin-left: -20px;
+  margin-top: 0;
+  margin-bottom: 0;
 
-.selection__extra-checkbox,
-.selection__diet-radio {
+  &--contact {
+    width: 222px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 64px;
+    padding-left: 40px;
+    margin-left: -41px;
+    padding-right: 41px;
+
+    &--contact {
+      width: 594px;
+    }
+  }
+}
+
+.selection__extra-input,
+.selection__diet-input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -33,9 +61,17 @@
 
 //Анкета
 
-.selection__list--info {
+.selection__info {
+  padding: 24px 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-right: 42px;
+    padding: 0;
+    margin-right: 40px;
   }
 }
 
@@ -43,25 +79,62 @@
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 14px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 19px;
+
+    &--info {
+      width: 100%;
+    }
+  }
 }
 
 .selection__label {
   display: flex;
   flex-shrink: 0;
-  margin-right: 15px;
+  margin-right: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 17px;
+  }
 }
 
 .selection__input {
   border: 1px solid @border-form;
   width: 100%;
-  padding-top: 14px;
-  padding-left: 16px;
-  padding-bottom: 14px;
+  height: 45px;
+  padding: 0 15px;
+  outline: none;
 
   @media (min-width: @tablet-width) {
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-bottom: 15px;
+    height: 52px;
+    padding: 0 18px;
+  }
+
+  &:hover {
+    border: 1px solid @border-dark;
+  }
+
+  &:active {
+    border: 1px solid @text;
+  }
+
+  &:active + svg {
+    fill: @bg-green;
+  }
+
+  &:focus:invalid {
+    border: 1px solid @error;
+  }
+
+  &:focus:invalid + svg {
+    fill: @error;
   }
 }
 
@@ -74,8 +147,11 @@
 
 .selection__diet {
   position: relative;
-  border-top: 1px solid @border-light;
-  border-bottom: 1px solid @border-light;
+  border: 1px solid @border-light;
+  padding-left: 0;
+  padding-bottom: 3px;
+  margin: 0;
+
 
   @media (max-width: @mobile-width-only) {
     margin-left: -20px;
@@ -85,32 +161,36 @@
   }
 
   @media (min-width: @tablet-width) {
-    border: 1px solid @border-light;
+    margin-top: 47px;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 18px;
+    margin-bottom: 4px;
     margin-left: 40px;
   }
 }
 
 .selection__diet-item {
-  position: relative;
   display: flex;
   align-items: center;
-  padding-left: 46px;
-  margin-top: 29px;
-  margin-bottom: 26px;
+  margin-top: 25px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 60px;
-    margin-left: 28px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 36px;
-    margin-bottom: 33px;
+    margin: 33px 27px;
   }
 }
 
 .selection__diet-label {
+  position: relative;
+  padding: 0 46px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 
   &::before {
     position: absolute;
@@ -119,14 +199,15 @@
     height: 30px;
     border: 1px solid @border-dark;
     border-radius: 50%;
-    top: -5px;
+    top: -6px;
     left: 0;
     vertical-align: center;
 
+
     @media (min-width: @tablet-width) {
-      top: -7px;
       width: 40px;
       height: 40px;
+      top: -9px;
     }
   }
 
@@ -137,48 +218,89 @@
     height: 12px;
     background-color: @bg-green;
     border-radius: 50%;
-    top: 4px;
+    top: 3px;
     left: 9px;
     vertical-align: center;
+    display: none;
 
     @media (min-width: @tablet-width) {
-      top: 7px;
-      left: 14px;
+      width: 18px;
+      height: 18px;
+      top: 2px;
+      left: 11px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
+  &:active {
+    color: rgba(34, 34, 34, 0.3);
+
+    &::before {
+      border: 1px solid #bababa;
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
     }
   }
 }
 
-.selection__diet-radio:checked + .selection__diet-label::after {
+.selection__diet-input:checked + .selection__diet-label::after {
   display: block;
 }
 
 // Контактные данные
 
-.selection__name {
-  padding: 10px 0;
-  margin-bottom: 11px;
+.selection__contact {
+  padding-top: 19px;
+  padding-bottom: 2px;
 
   @media (min-width: @tablet-width) {
-    padding: 30px 0;
+    padding-top: 57px;
+    padding-bottom: 0;
   }
-}
 
-.selection-contact {
   @media (min-width: @desktop-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 2px;
   }
 }
 
-.selection__input-mail {
+.selection__item:first-child {
   @media (min-width: @desktop-width) {
-    padding-right: 295px;
+    margin-right: 77px;
   }
 }
 
-.selection__input-phone {
+.selection__label--mail {
+  margin-right: 11px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 18px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding-right: 270px;
+    margin-right: 22px;
+  }
+}
+
+.selection__input--mail {
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 487px;
+    padding-left: 18px;
   }
 }
 
@@ -186,10 +308,36 @@
   position: absolute;
   width: 18px;
   height: 14px;
+  top: 15px;
   right: 15px;
 
   @media (min-width: @tablet-width) {
-    right: 20px;
+    top: 19px;
+    right: 19px;
+  }
+}
+
+.selection__label--phone {
+  margin-right: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 16px;
+  }
+}
+
+.selection__input--phone {
+  padding-left: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 472px;
   }
 }
 
@@ -197,10 +345,17 @@
   position: absolute;
   width: 21px;
   height: 21px;
+  top: 13px;
   right: 13px;
 
+
   @media (min-width: @tablet-width) {
-    right: 17px;
+    top: 17px;
+    right: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 19px;
   }
 }
 
@@ -212,10 +367,22 @@
   min-height: 150px;
   border: 1px solid @border-form;
   resize: none;
-  margin: 20px 0;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 14px;
+  padding-right: 13px;
+  margin-top: 34px;
+
 
   @media (min-width: @tablet-width) {
-    min-height: 196px;
+    min-height: 174px;
+    padding: 9px 17px;
+    margin-top: 77px;
+    margin-bottom: 1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 3px;
   }
 }
 
@@ -224,46 +391,80 @@
   line-height: 18px;
   font-family: @font-title;
   color: @text;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-  padding-top: 13px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    text-align: left;
-    padding-top: 17px;
-    padding-left: 20px;
   }
 }
 
 //Дополнительные товары
 
 .selection__extra {
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 41px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 67px;
+    margin-bottom: 11px;
   }
 
   @media (min-width: @desktop-width) {
-    flex-wrap: nowrap;
+    margin-bottom: 18px;
   }
 }
 
 .selection__extra-item {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
-    padding-left: 66px;
-    margin-bottom: 54px;
+    margin-bottom: 52px;
+    width: 220px;
+  }
+
+  &:first-child {
+    @media (min-width: @tablet-width) {
+      margin-right: 123px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 104px;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: @desktop-width) {
+      margin-right: 105px;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: @tablet-width) {
+      margin-right: 123px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 105px;
+    }
   }
 }
 
 .selection__extra-label {
   position: relative;
   cursor: pointer;
-  padding-left: 46px;
+  padding: 2px 46px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 4px;
+    padding-left: 59px;
+    padding-right: 20px;
+    padding-bottom: 4px;
+  }
 
   &::before {
     position: absolute;
@@ -289,16 +490,79 @@
     transform: rotate(-45deg);
     border-top-style: none;
     border-right-style: none;
-    top: 3px;
-    left: 5px;
+    top: 7px;
+    left: 6px;
+    display: none;
 
     @media (min-width: @tablet-width) {
-      top: 5px;
+      top: 12px;
       left: 10px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
+  &:active {
+    color: rgba(34, 34, 34, 0.3);
+
+    &::before {
+      border: 1px solid #bababa;
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
     }
   }
 }
 
-.selection__extra-checkbox:checked + .selection__extra-label::after {
+
+.selection__extra-input:checked + .selection__extra-label::after {
   display: block;
+}
+
+.selection__extra-input:disabled + .selection__extra-label {
+  opacity: 0.3;
+}
+
+//Кроссбраузерность
+//-------------------
+
+//Убираем стрелки
+::-webkit-contacts-auto-fill-button,
+::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+//Убираем иконку пользователя
+::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+// Фиксирование цвета placeholder для Firefox 19+ and Firefox 18-
+::-moz-placeholder {
+  opacity: 1;
+}
+
+// Фиксирование цвета placeholder для IE
+:-ms-input-placeholder {
+  font-family: @font-title;
+  color: @text;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

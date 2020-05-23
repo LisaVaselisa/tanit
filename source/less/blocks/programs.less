@@ -28,7 +28,7 @@
 
   @media (min-width: @desktop-width) {
     width: 46.7%;
-    padding-right: 55px;
+    padding-right: 45px;
     margin: 0;
   }
 }
@@ -38,7 +38,7 @@
   font-size: 24px;
   line-height: 37px;
   padding-top: 10px;
-  padding-bottom: 7px;
+  padding-bottom: 8px;
   padding-left: 71px;
 
   @media (min-width: @tablet-width) {
@@ -48,7 +48,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 163px;
+    padding-left: 162px;
   }
 
   &::before {
@@ -71,7 +71,7 @@
     @media (min-width: @desktop-width) {
       width: 100px;
       height: 100px;
-      top: -30px;
+      top: -29px;
       left: 0;
     }
   }
@@ -82,51 +82,47 @@
     background-repeat: no-repeat;
   }
 
-  &--slim {
-    &::after {
-      background-image: url("../img/icon-cat-slim.svg");
-      width: 35px;
-      height: 49px;
-      top: 2px;
-      left: 10px;
+  &--slim::after {
+    background-image: url("../img/icon-cat-slim.svg");
+    width: 35px;
+    height: 49px;
+    top: 2px;
+    left: 10px;
 
-      @media (min-width: @tablet-width) {
-        width: 141px;
-        height: 194px;
-        top: 4px;
-        left: 424px;
-      }
+    @media (min-width: @tablet-width) {
+      width: 141px;
+      height: 194px;
+      top: 4px;
+      left: 424px;
+    }
 
-      @media (min-width: @desktop-width) {
-        width: 71px;
-        height: 97px;
-        top: -37px;
-        left: 13px;
-      }
+    @media (min-width: @desktop-width) {
+      width: 71px;
+      height: 97px;
+      top: -36px;
+      left: 13px;
     }
   }
 
-  &--pro {
-    &::after {
-      background-image: url("../img/icon-cat-pro.svg");
-      width: 67px;
-      height: 28px;
-      top: 15px;
-      left: -7px;
+  &--pro::after {
+    background-image: url("../img/icon-cat-pro.svg");
+    width: 67px;
+    height: 28px;
+    top: 15px;
+    left: -7px;
 
-      @media (min-width: @tablet-width) {
-        width: 268px;
-        height: 113px;
-        top: 58px;
-        left: 360px;
-      }
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 113px;
+      top: 59px;
+      left: 360px;
+    }
 
-      @media (min-width: @desktop-width) {
-        width: 134px;
-        height: 57px;
-        top: -9px;
-        left: -18px;
-      }
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 57px;
+      top: -8px;
+      left: -18px;
     }
   }
 }
@@ -164,7 +160,7 @@
   text-decoration: none;
   display: flex;
   border-top: 1px solid @border-dark;
-  padding-top: 17px;
+  padding-top: 16px;
   margin-right: 1px;
   margin-bottom: 20px;
 
@@ -172,9 +168,10 @@
     font-size: 20px;
     line-height: 20px;
     border: none;
+    padding-top: 18px;
   }
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     background-image: url("../img/icon-right-arrow-long.svg");
@@ -187,5 +184,16 @@
     @media (min-width: @tablet-width) {
       left: 128px;
     }
+  }
+
+  &:hover::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 12px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
