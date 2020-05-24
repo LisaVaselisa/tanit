@@ -7,11 +7,40 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
+
+              <!-- Pixel Glass -->
+<style>
+  html {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /* По умолчанию показывается мобильный макет */
+    background-image: url("../img/cat-energy-catalog-mobile.png");
+  }
+  /* Планшет */
+  @media (min-width: 768px) {
+    html {
+      /* Планшетный макет */
+      background-image: url("../img/cat-energy-catalog-tablet.png");
+    }
+  }
+  /* Десктоп */
+  @media (min-width: 1300px) {
+    html {
+      /* Десктопный макет */
+      background-image: url("../img/cat-energy-catalog-desktop.png");
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+<script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+<!-- // Pixel Glass -->
+
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.js" async=""></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
     <div style="display: none;">
@@ -26,8 +55,9 @@
             <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="логотип Cat Energy">
           </picture>
         </a>
-        <div class="page-header__menu page-header__menu--opened page-header__menu--nojs">
+        <div class="page-header__menu page-header__menu--closed page-header__menu--nojs">
           <button class="page-header__toggle" type="button" aria-label="Открыть меню"></button>
+
           <nav class="page-header__nav">
             <ul class="page-header__nav-list site-list">
               <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
@@ -54,7 +84,9 @@
               </picture>
             </a>
             <div class="catalog-card__info">
-              <h3 class="catalog-card__title main-title">Cat Energy PRO 500 г</h3>
+              <a class="catalog-card__link-title" href="#">
+                <h3 class="catalog-card__title main-title">Cat Energy PRO 500 г</h3>
+              </a>
               <table class="catalog-card__table">
                 <tr class="catalog-card__cell">
                   <td class="catalog-card__left">Объем</td>
@@ -84,7 +116,9 @@
               </picture>
             </a>
             <div class="catalog-card__info">
-              <h3 class="catalog-card__title main-title">Cat Energy PRO 1000 г</h3>
+              <a class="catalog-card__link-title" href="#">
+                <h3 class="catalog-card__title main-title">Cat Energy PRO 1000 г</h3>
+              </a>
               <table class="catalog-card__table">
                 <tr class="catalog-card__cell">
                   <td class="catalog-card__left">Объем</td>
@@ -114,7 +148,9 @@
               </picture>
             </a>
             <div class="catalog-card__info">
-              <h3 class="catalog-card__title main-title">Cat Energy PRO 500 г</h3>
+              <a class="catalog-card__link-title" href="#">
+                <h3 class="catalog-card__title main-title">Cat Energy PRO 500 г</h3>
+              </a>
               <table class="catalog-card__table">
                 <tr class="catalog-card__cell">
                   <td class="catalog-card__left">Объем</td>
@@ -144,7 +180,9 @@
               </picture>
             </a>
             <div class="catalog-card__info">
-              <h3 class="catalog-card__title main-title">Cat Energy PRO 1000 г</h3>
+              <a class="catalog-card__link-title" href="#">
+                <h3 class="catalog-card__title main-title">Cat Energy PRO 1000 г</h3>
+              </a>
               <table class="catalog-card__table">
                 <tr class="catalog-card__cell">
                   <td class="catalog-card__left">Объем</td>
@@ -174,7 +212,9 @@
               </picture>
             </a>
             <div class="catalog-card__info">
-              <h3 class="catalog-card__title main-title">Cat Energy Slim 500 г</h3>
+              <a class="catalog-card__link-title" href="#">
+                <h3 class="catalog-card__title main-title">Cat Energy Slim 500 г</h3>
+              </a>
               <table class="catalog-card__table">
                 <tr class="catalog-card__cell">
                   <td class="catalog-card__left">Объем</td>
@@ -204,7 +244,9 @@
               </picture>
             </a>
             <div class="catalog-card__info">
-              <h3 class="catalog-card__title main-title">Cat Energy Slim 1000 г</h3>
+              <a class="catalog-card__link-title" href="#">
+                <h3 class="catalog-card__title main-title">Cat Energy Slim 1000 г</h3>
+              </a>
               <table class="catalog-card__table">
                 <tr class="catalog-card__cell">
                   <td class="catalog-card__left">Объем</td>
@@ -234,7 +276,10 @@
               </picture>
             </a>
             <div class="catalog-card__info">
-              <h3 class="catalog-card__title main-title">Cat Energy Slim 500 г</h3><table class="catalog-card__table">
+              <a class="catalog-card__link-title" href="#">
+                <h3 class="catalog-card__title main-title">Cat Energy Slim 500 г</h3>
+              </a>
+              <table class="catalog-card__table">
                 <tr class="catalog-card__cell">
                   <td class="catalog-card__left">Объем</td>
                   <td class="catalog-card__right">500 г</td>
@@ -267,7 +312,7 @@
           </div>
         </div>
         <div class="container">
-          <div class="extra-wrap">
+          <div class="extra__wrap">
             <ul class="extra__list">
               <li class="extra__item product-card">
                 <div class="product-card__wrap">
@@ -354,7 +399,7 @@
           </li>
           <li class="social-list__item">
             <a class="social-list__link social-list__link--inst" href="https://www.instagram.com/htmlacademy/" target="_blank" aria-label="Инстаграм">
-              <svg>
+              <svg width="17" height="17">
                 <use xlink:href="#icon-insta"></use>
               </svg>
             </a>

@@ -7,11 +7,41 @@
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
+
+              <!-- Pixel Glass -->
+<style>
+  html {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /* По умолчанию показывается мобильный макет */
+    background-image: url("../img/cat-energy-form-mobile.png");
+  }
+  /* Планшет */
+  @media (min-width: 768px) {
+    html {
+      /* Планшетный макет */
+      background-image: url("../img/cat-energy-form-tablet.png");
+    }
+  }
+  /* Десктоп */
+  @media (min-width: 1300px) {
+    html {
+      /* Десктопный макет */
+      background-image: url("../img/cat-energy-form-desktop.png");
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+<script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>
+<!-- // Pixel Glass -->
+
+
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
     <script src="js/picturefill.js" async=""></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
     <div style="display: none;">
@@ -42,14 +72,14 @@
       <section class="form">
         <div class="container">
           <h1 class="form__title big-title">Подбор программы</h1>
-          <div class="form-wrap">
+          <div class="form__wrap">
             <p class="form__text">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
           </div>
         </div>
 
         <form class="form__program" action="https://echo.htmlacademy.ru" method="post">
           <div class="container">
-            <div class="form-wrap">
+            <div class="form__wrap">
               <fieldset class="form__order selection">
                 <legend class="visually-hidden">Информация о коте</legend>
                 <div class="selection__info">
@@ -59,11 +89,11 @@
                   </p>
                   <p class="selection__item">
                     <label class="selection__label" for="weight">Вес (кг):*</label>
-                    <input class="selection__input" type="number" id="weight" name="cat-weight" placeholder="7" required="">
+                    <input class="selection__input" type="text" id="weight" name="cat-weight" placeholder="7" required="">
                   </p>
                   <p class="selection__item">
                     <label class="selection__label" for="age">Возраст (лет):</label>
-                    <input class="selection__input" type="number" id="age" name="cat-age" placeholder="7">
+                    <input class="selection__input" type="text" id="age" name="cat-age" placeholder="7">
                   </p>
                 </div>
               </fieldset>
@@ -90,13 +120,13 @@
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <div class="form-wrap">
+                <div class="form__wrap">
                   <h2 class="selection__name selection__name--contact middle-title">Контактные данные (владельца кота)</h2>
                 </div>
               </div>
             </div>
             <div class="container">
-              <div class="form-wrap">
+              <div class="form__wrap">
                 <div class="selection__contact">
                   <p class="selection__item">
                     <label class="selection__label selection__label--mail" for="mail">E-mail:*</label>
@@ -120,13 +150,13 @@
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <div class="form-wrap">
+                <div class="form__wrap">
                   <h2 class="selection__name middle-title">Комментарий</h2>
                 </div>
               </div>
             </div>
             <div class="container">
-              <div class="form-wrap">
+              <div class="form__wrap">
                 <textarea class="selection__comment" name="coment" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </div>
@@ -135,13 +165,13 @@
           <fieldset class="form__order selection">
             <div class="green-line">
               <div class="container">
-                <div class="form-wrap">
+                <div class="form__wrap">
                   <h2 class="selection__name middle-title">Дополнительно</h2>
                 </div>
               </div>
             </div>
             <div class="container">
-              <div class="form-wrap">
+              <div class="form__wrap">
                 <ul class="selection__extra">
                   <li class="selection__extra-item">
                     <input class="selection__extra-input" type="checkbox" id="sweetener" name="sweetener" checked>
@@ -165,7 +195,7 @@
           </fieldset>
 
           <div class="container">
-            <div class="form-wrap">
+            <div class="form__wrap">
               <div class="form__link">
                 <button class="form__btn btn" type="submit">Отправить заявку</button>
                 <small class="form__note-text">* — Обязательные поля</small>

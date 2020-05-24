@@ -10,6 +10,7 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 73px;
+    padding-bottom: 0;
   }
 }
 
@@ -27,7 +28,6 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 73px;
     counter-reset: number;
@@ -36,7 +36,6 @@
   @media (min-width: @desktop-width) {
     position: relative;
     flex-direction: row;
-    flex-wrap: nowrap;
     margin-top: 72px;
   }
 }
@@ -56,10 +55,14 @@
     padding-right: 75px;
     margin-bottom: 0;
 
-
     &:first-child,
     &:nth-child(2) {
       margin-bottom: 35px;
+    }
+
+    &:first-child,
+    &:nth-child(3) {
+      margin-right: 59px;
     }
   }
 
@@ -67,12 +70,16 @@
     width: 20.2%;
     min-height: 240px;
     padding-right: 0;
+    margin-bottom: 10px;
 
     &:first-child,
-    &:nth-child(2) {
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-right: 78px;
       margin-bottom: 0;
     }
   }
+
 
   &::before {
     content: "";
