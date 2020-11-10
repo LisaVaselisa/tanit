@@ -1,0 +1,22 @@
+.location__list {
+  .list-no();
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-min) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  @media (min-width: @desktop-min) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
+
+.location__name-link {
+  text-decoration: none;
+  display: block;
+}

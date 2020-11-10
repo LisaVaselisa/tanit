@@ -1,0 +1,80 @@
+.nav {
+  position: fixed;
+  background-color: @bg-black;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50%;
+  display: none;
+  z-index: 1;
+  animation-name: animate;
+  animation-duration: 0.5s;
+
+  @keyframes animate {
+    from {
+      left: 0;
+      opacity: 0;
+    }
+
+    to {
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: @desktop-min) {
+    background-color: transparent;
+  }
+}
+
+.nav__list {
+  .list-no();
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+
+  // @media (min-width: @tablet-min) {
+  // }
+
+  @media (min-width: @desktop-min) {
+    flex-direction: row;
+    padding: 15px 15px;
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  display: block;
+  width: max-content;
+  padding: 7px 25px;
+}
+
+.nav__span {
+  position: relative;
+  color: @text-white;
+
+  &.active {
+    color: @text-yellow;
+  }
+
+  &:hover {
+    color: @text-yellow;
+  }
+
+  &:hover::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    // right: 100%;
+    background-color: @text-yellow;
+    transition: all 200ms ease;
+  }
+}
+
+.nav__show {
+  display: block;
+}
