@@ -1,8 +1,17 @@
 .title-main {
-  .text(36px, 40px);
-  text-transform: none;
+  position: relative;
+  .text(14px, 1.875em);
+  color: @color-yellow;
+  padding-left: 25px;
+  margin: 15px 0;
 
-  @media (min-width: @desktop-min) {
-    .text(48px, 50px);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 1px;
+    background-color: @color-yellow;
+    top: 50%;
+    left: 0;
   }
 }

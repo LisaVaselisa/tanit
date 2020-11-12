@@ -8,12 +8,11 @@ openMenu.addEventListener('click', function (evt) {
   modalMenu.classList.add('nav__show');
 });
 
-// // Закрываем корзину
-// document.addEventListener('click', function (evt) {
-//   if ((evt.target).is(modalMenu)) {
-//     modalMenu.classList.remove('nav__show');
-//   }
-// }
+// Закрываем корзину
+modalMenu.addEventListener('click', function (evt) {
+  modalMenu.classList.remove('nav__show');
+});
+
 //   evt.preventDefault();
 //   modalMenu.classList.remove('nav__show');
 // });
@@ -66,4 +65,3 @@ openMenu.addEventListener('click', function (evt) {
 // var openMenu = document.querySelector('.apage-header__toggle');
 // var modalMenu = document.querySelector('.nav');
 // // let closeMenu = modalMenu.querySelector('.apage-header__toggle');
-

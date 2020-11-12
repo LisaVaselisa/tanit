@@ -32,7 +32,7 @@
   .list-no();
   display: flex;
   flex-direction: column;
-  padding-top: 70px;
+  padding-top: 75px;
 
   // @media (min-width: @tablet-min) {
   // }
@@ -52,14 +52,14 @@
 
 .nav__span {
   position: relative;
-  color: @text-white;
+  color: @color-white;
 
   &.active {
-    color: @text-yellow;
+    color: @color-yellow;
   }
 
   &:hover {
-    color: @text-yellow;
+    color: @color-yellow;
   }
 
   &:hover::before {
@@ -70,7 +70,7 @@
     height: 1px;
     left: 0;
     // right: 100%;
-    background-color: @text-yellow;
+    background-color: @color-yellow;
     transition: all 200ms ease;
   }
 }
