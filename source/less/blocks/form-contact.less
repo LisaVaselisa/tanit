@@ -1,3 +1,12 @@
+.form-contact__list,
+.form-contact__message {
+  font-size: 16px;
+
+  @media (min-width: @desktop-min) {
+    font-size: 18px;
+  }
+}
+
 .form-contact__list {
   .list-no();
   display: flex;
@@ -5,17 +14,46 @@
 }
 
 .form-contact__item {
-  color: @color-gray;
   border-bottom: 1px solid @color-graydark;
+  padding-top: 15px;
+
+  @media (min-width: @tablet-min) {
+    &:first-child {
+      padding: 0;
+    }
+  }
+
+  &:hover {
+    border-color: @color-white;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: @color-yellow;
+  }
 }
 
 .form-contact__input {
-  color: @color-gray;
+  color: currentColor;
+  .element-size(100%, 100%);
   background-color: transparent;
   border: none;
+  padding: 11px 0;
   display: block;
-  .element-size(100%, 100%);
-  padding: 20px 0;
+  outline: none;
+
+  @media (min-width: @desktop-min) {
+    padding: 12px 0;
+  }
+}
+
+.form-contact__input::placeholder {
+  color: @color-gray;
+}
+
+.form-contact__message {
+  padding-top: 26px;
 }
 
 .form-contact_message-text {
@@ -25,5 +63,24 @@
   background-color: transparent;
   border-color: @color-graydark;
   padding: 15px 20px;
+  margin-top: 11px;
   resize: none;
+
+  @media (min-width: @desktop-min) {
+    margin-top: 14px;
+  }
+
+  &:hover {
+    border-color: @color-white;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: @color-yellow;
+  }
+}
+
+.form-contact__btn {
+  margin-top: 30px;
 }

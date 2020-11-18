@@ -1,4 +1,6 @@
 .page-header {
+  border-bottom: 1px solid @color-graydark;
+
   @media (min-width: @desktop-min) {
     background-color: @bg-black;
   }
@@ -8,7 +10,16 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 15px;
+  align-items: center;
+  padding: 10px 0;
+
+  @media (min-width: @tablet-min) {
+    padding: 15px 0;
+  }
+
+  @media (min-width: @desktop-min) {
+    padding: 20px 0;
+  }
 }
 
 .page-header__menu {
@@ -18,20 +29,22 @@
 .page-header__btn {
   position: absolute;
   align-self: center;
-  width: 15px;
-  height: 15px;
+  .element-size(15px, 15px);
   background-color: transparent;
   border: none;
-  top: 0;
+  top: -7px;
   right: 0;
   cursor: pointer;
   z-index: 2;
+
+  @media (min-width: @desktop-min) {
+    display: none;
+  }
 }
 
 .page-header__span {
   position: absolute;
-  width: 15px;
-  height: 1px;
+  .element-size(15px, 1px);
   background-color: @color-white;
   top: 50%;
   left: 50%;
@@ -42,8 +55,7 @@
   &::before {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
+    .element-size(100%, 100%);
     background-color: @color-white;
     top: -4px;
     left: 0;
@@ -55,8 +67,7 @@
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 100%;
+    .element-size(100%, 100%);
     background-color: @color-white;
     top: 4px;
     left: 0;

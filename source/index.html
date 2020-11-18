@@ -5,9 +5,12 @@
     <title>Кинокомпания Танит</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/poppins-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/firasans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/firasans-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+
     <link href="css/style.min.css" rel="stylesheet">
 
   </head>
@@ -20,7 +23,7 @@
         <div class="page-header__wrap">
           <a class="page-header__logo">
             <picture>
-             <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+              <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
               <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
               <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
@@ -42,7 +45,7 @@
                 <li class="nav__item">
                   <a class="nav__link" href="about.html">
                     <span class="nav__span">О нас</span>
-                 </a>
+                  </a>
                 </li>
                 <li class="nav__item">
                   <a class="nav__link" href="locations.html">
@@ -73,12 +76,56 @@
 
     <main class="page-main">
       <div class="container">
-        <h1 class="visually-hidden"></h1>
-        <section class="promo">
-          <h2 class="promo__title title-main">Кинокомпания Танит</h2>
-          <p class="promo__quote title-big">Кино как образ жизни</p>
-          <p class="promo__text text-main">Кинокомпания Танит была основана продюсерами Александр Наас и Елена Пересветова.</p>
-          <p class="promo__text text-main">Мы амбициозная молодая команда, которая объединила лучших специалистов в области кино, телевидения и рекламы для производства качественной продукции. Мы осуществляем полный цикл кинопроизводства.</p>
+        <h1 class="visually-hidden">Вся информация о кинокомпании Танит</h1>
+        <section class="about">
+          <h2 class="about__title title-main">О нас</h2>
+          <div class="about__bar">
+
+            <div class="about__info">
+              <p class="about__info-subtitle title-big">Кинокомпания Танит</p>
+              <p class="about__info-text">была основана продюсером Александр Наас.</p>
+              <p class="about__info-text">Мы амбициозная молодая команда, которая объединила лучших специалистов в области кино, телевидения и рекламы для производства качественной продукции и осуществляем полный цикл кинопроизводства.</p>
+              <q class="about__info-quote">Кино как образ жизни</q>
+              <a class="about__link button" href="about.html">Подробнее</a>
+            </div>
+
+            <div class="about__photo">
+              <picture>
+                <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
+                <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
+                <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
+                <source media="(min-width: 768px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x"> -->
+                <img src="https://via.placeholder.com/290x270" width="290" height="270" alt="Фото продюсера Наас Александра">
+              </picture>
+              <ul class="about__social">
+                <li class="about__social-item">
+                  <a class="about__social-link" href="https://www.facebook.com/naas.alexander/" aria-label="Фейсбук Наас Александра" target="_blank">
+                    <svg width="21" height="21">
+                      <use xlink:href="#icon-fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="about__social-item">
+                  <a class="about__social-link" href="https://www.instagram.com/alexander_naas/" aria-label="Инстаграм Наас Александра" target="_blank">
+                    <svg width="20" height="20">
+                      <use xlink:href="#icon-inst"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="about__social-item">
+                  <a class="about__social-link" href="https://tn.linkedin.com/in/alexander-naas/" aria-label="Линкедин Наас Александра" target="_blank">
+                    <svg width="23" height="23">
+                      <use xlink:href="#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
 
         </section>
         <section class="location">
@@ -86,167 +133,175 @@
           <ul class="location__list">
 
             <li class="location__item">
-              <h3 class="location__name">
-                <a class="location__name-link" href="">Москва</a>
-              </h3>
-              <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
-              </a>
-            </li>
-
-            <!-- <li class="location__item">
-              <h3 class="location__name">
-                <a class="location__name-link" href="">Московская область</a>
-              </h3>
-              <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+              <a class="location__item-link" href="#" target="_blank">
+                <h3 class="location__name title-mid">Москва</h3>
+                <img class="location__img" src="https://via.placeholder.com/200x200" width="260px" height="200px" alt="Локация - Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
-                <a class="location__name-link" href="">Санкт-Петербург</a>
-              </h3>
-              <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+              <a class="location__item-link" href="#" target="_blank">
+                <h3 class="location__name title-mid">Московская область</h3>
+                <img class="location__img" src="https://via.placeholder.com/200x200" width="260px" height="200px" alt="Локация - Московская область">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <a class="location__item-link" href="#" target="_blank">
+                <h3 class="location__name title-mid">Санкт-Петербург</h3>
+                <img class="location__img" src="https://via.placeholder.com/200x200" width="260px" height="200px" alt="Локация - Санкт-Петербург">
+              </a>
+            </li>
+
+            <li class="location__item">
+              <a class="location__item-link" href="#" target="_blank">
+                <h3 class="location__name title-mid">Адыгея</h3>
+                <img class="location__img" src="https://via.placeholder.com/200x200" width="260px" height="200px" alt="Локация - Адыгея">
+              </a>
+            </li>
+
+
+      <!--<li class="location__item">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Адыгея</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Крым</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Иркутск</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Калининград</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Камчатка</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Карелия</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Казань</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Кострома</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Мурманск</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Нижний Новгород</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Псков</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Сочи</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Якутия</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Ярославль</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li>
 
             <li class="location__item">
-              <h3 class="location__name">
+              <h3 class="location__name title-mid">
                 <a class="location__name-link" href="">Йошкар-Ола</a>
               </h3>
               <a class="location__link" href="" target="_blank">
-                <img class="location__img" src="https://via.placeholder.com/150x150" width="225px" height="225px" alt="Локация-Москва">
+                <img class="location__img" src="https://via.placeholder.com/260x200" width="260px" height="200px" alt="Локация-Москва">
               </a>
             </li> -->
           </ul>
+
+          <button class="location__arrow location__arrow--left" id="left-btn" type="button" aria-label="Предыдущий слайд"></button>
+          <button class="location__arrow location__arrow--right" id="right-btn" type="button" aria-label="Следующий слайд"></button>
+
+
+          <a class="location__link button" href="locations.html">Показать</a>
         </section>
         <section class="services">
           <h2 class="services__title title-main">Сервис</h2>
@@ -280,49 +335,201 @@
         </section>
         <section class="contacts">
           <h2 class="contacts__title title-main">Контакты</h2>
-          <div class="contacts__bar">
-            <a class="contacts__tel" href="tel:+79261492424" aria-label="Телефон для связи">+7 (926) 149-24-24</a>
-            <a class="contacts__mail" href="https://tanit.ru/contacts">info@tanitfilm.com</a>
-            <address class="contacts__address">г. Москва, ул. Мосфильмовская 1</address>
-            <div class="contacts__map">
-              <iframe class="contact__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8988.449695045598!2d37.51984794755854!3d55.72179837396304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54c0aaa65b6b9%3A0xf642e07cd1b34260!2z0JzQvtGB0YTQuNC70YzQvNC-0LLRgdC60LDRjyDRg9C7LiwgMSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDExOTI4NQ!5e0!3m2!1sru!2stn!4v1605128927392!5m2!1sru!2stn" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <div class="contact__wrap">
+
+            <div class="contacts__bar">
+              <a class="contacts__tel" href="tel:+79261492424" aria-label="Телефон для связи">+7 (926) 149-24-24</a>
+              <a class="contacts__mail" href="https://tanit.ru/contacts">info@tanitfilm.com</a>
+              <address class="contacts__address">г. Москва, ул. Мосфильмовская 1</address>
+              <div class="contacts__map">
+                <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8988.449695045598!2d37.51984794755854!3d55.72179837396304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54c0aaa65b6b9%3A0xf642e07cd1b34260!2z0JzQvtGB0YTQuNC70YzQvNC-0LLRgdC60LDRjyDRg9C7LiwgMSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDExOTI4NQ!5e0!3m2!1sru!2stn!4v1605128927392!5m2!1sru!2stn" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
             </div>
+
+            <form class="contacts__form form-contact" action="https://echo.tanitfilm.com" method="post">
+              <h2 class="visually-hidden">Связаться с нами</h2>
+              <ul class="form-contact__list">
+                <li class="form-contact__item">
+                  <label class="form-contact__label" for="name"></label>
+                  <input class="form-contact__input" id="name" type="text" name="user-name" placeholder="Имя" required="">
+                </li>
+                <li class="form-contact__item">
+                  <label class="form-contact__label" for="mail"></label>
+                  <input class="form-contact__input" type="text" id="mail" name="user-mail" placeholder="E-mail" required="">
+                </li>
+                <li class="form-contact__item">
+                  <label class="form-contact__label" for="subject"></label>
+                  <input class="form-contact__input" type="text" id="subject" name="subject" placeholder="Тема" required="">
+                </li>
+              </ul>
+              <div class="form-contact__message">
+                <label class="form-contact__message-title" for="comment">Сообщение</label>
+                <textarea class="form-contact_message-text" name="comment" id="comment"></textarea>
+              </div>
+              <button class="form-contact__btn button" type="submit">Отправить</button>
+            </form>
+
           </div>
 
-          <form class="contacts__form form-contact" action="https://echo.tanitfilm.com" method="post">
-            <h2 class="visually-hidden">Связаться с нами</h2>
-            <ul class="form-contact__list">
-              <li class="form-contact__item">
-                <label class="form-contact__label" for="name"></label>
-                <input class="form-contact__input" id="name" type="text" name="user-name" placeholder="Имя" required="">
-              </li>
-              <li class="form-contact__item">
-                <label class="form-contact__label" for="mail"></label>
-                <input class="form-contact__input" type="text" id="mail" name="user-mail" placeholder="E-mail" required="">
-              </li>
-              <li class="form-contact__item">
-                <label class="form-contact__label" for="subject"></label>
-                <input class="form-contact__input" type="text" id="subject" name="subject" placeholder="Тема" required="">
-              </li>
-            </ul>
-            <div class="form-contact__message">
-              <label class="form-contact__message-title" for="comment">Сообщение</label>
-              <textarea class="form-contact_message-text" name="comment" id="comment"></textarea>
-            </div>
-            <button class="form-contact__btn button" type="submit">Отправить</button>
-          </form>
+
+
+        </section>
+        <section class="partners">
+          <h2 class="partners__title title-main">Наши партнеры</h2>
+          <ul class="partners__list">
+            <li class="partners__item">
+              <a class="partners__link" href="https://allegrofilm.com">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
+                  <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
+                  <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x"> -->
+                  <img class="partners__logo" src="img/logo-allegro.png" width="70" height="50" alt="Логотип кинокомпании Аллегро фильм">
+                </picture>
+            </a>
+            </li>
+            <li class="partners__item">
+              <a class="partners__link" href="http://filmintunisia.com">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
+                  <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
+                  <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x"> -->
+                  <img class="partners__logo" src="img/logo-tis.png" width="60" height="50" alt="Логотип кинокомпании TIS">
+                </picture>
+            </a>
+            </li>
+            <li class="partners__item">
+              <a class="partners__link" href="https://naasfilms.com">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
+                  <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
+                  <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x"> -->
+                  <img class="partners__logo" src="img/logo-nfs.png" width="50" height="50" alt="Логотип кинокомпании NFS">
+                </picture>
+            </a>
+            </li>
+            <li class="partners__item">
+              <a class="partners__link" href="http://www.onlinetravel.pro">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
+                  <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
+                  <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x"> -->
+                  <img class="partners__logo" src="img/logo-travel.png" width="50" height="50" alt="Логотип travel & travel">
+                </picture>
+            </a>
+            </li>
+            <li class="partners__item">
+              <a class="partners__link" href="http://help-assist.net">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
+                  <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
+                  <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x"> -->
+                  <img class="partners__logo" src="img/logo-assist.png" width="50" height="50" alt="Логотип help assist">
+                </picture>
+            </a>
+            </li>
+            <li class="partners__item">
+              <a class="partners__link" href="http://www.likerentcar.com">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
+                  <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
+                  <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x"> -->
+                  <img class="partners__logo" src="img/logo-like.png" width="60" height="50" alt="Логотип like rent car">
+                </picture>
+            </a>
+            </li>
+          </ul>
         </section>
       </div>
     </main>
     <footer class="page-footer">
-      <!-- <section class="">
-        <ul class="">
-          <li class=""></li>
-        </ul>
-      </section> -->
+      <div class="container">
+
+        <div class="page-footer__wrap">
+          <div class="page-footer__bar">
+            <div class="page-footer__author">
+              <a class="page-footer__logo">
+                <picture>
+                  <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tanit.webp 1x, img/logo-tanit.webp 2x"> -->
+                  <!-- <source type="image/webp" srcset="img/logo-tanit.webp"> -->
+                  <!-- <source media="(min-width: 1024px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/logo-tanit.png 1x, img/logo-tanit.png 2x"> -->
+                  <img class="page-header__logo-img" src="img/logo-tanit.png" width="50" height="50" alt="Логотип Танит">
+                </picture>
+              </a>
+              <div class="page-footer__copyright">
+                <span>© Кинокомпания «Танит»</span>
+                <span>Все права защищены</span>
+              </div>
+            </div>
+
+            <ul class="page-footer__social social">
+              <li class="social__item">
+                <a class="social__link" href="#" target="_blank" aria-label="Фейсбук">
+                  <svg width="20" height="20">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#" target="_blank" aria-label="Инстаграм">
+                  <svg width="20" height="20">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="page-footer__links footer-links">
+            <li class="footer-links__item">
+              <span class="footer-links__span">Телефон:</span>
+              <a class="footer-links__link" href="tel:+79261492424">+7 (926) 149-24-24</a>
+            </li>
+            <li class="footer-links__item">
+              <span class="footer-links__span">E-mail:</span>
+              <a class="footer-links__link" href="https://tanit.com/contacts"">info@tanitfilm.com</a>
+            </li>
+            <li class="footer-links__item">
+              <span class="footer-links__span">Разработано:</span>
+              <a class="footer-links__link" href="#" target="_blank">lisa-vaselisa.ru</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </footer>
     <script src="js/picturefill.js" async=""></script>
     <script src="js/menu.js" async=""></script>
+    <script src="js/slider.js" async=""></script>
 
   </body>
 </html>
@@ -389,5 +596,3 @@
           </a>
         </div>
       </section> -->
-
-

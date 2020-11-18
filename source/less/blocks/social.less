@@ -1,0 +1,27 @@
+.social {
+  .list-no();
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.social__link {
+  display: block;
+
+  svg {
+    fill: @color-white;
+
+    @media (min-width: @desktop-min) {
+      .element-size(25px, 25px);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      fill: @color-yellow;
+    }
+  }
+}
