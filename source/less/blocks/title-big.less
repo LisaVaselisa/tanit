@@ -1,9 +1,16 @@
 .title-big {
-  .text(36px, 1em);
-  text-transform: none;
-  margin: 20px 0;
+  font-family: @font-main;
+  font-size: 28px;
+  line-height: 1em;
+  font-weight: 600;
+  color: @color-white;
+  margin: 0;
+
+  @media (min-width: @tablet-min) {
+    font-size: 36px;
+  }
 
   @media (min-width: @desktop-min) {
-    .text(48px, 1.5em);
+    font-size: 46px;
   }
 }

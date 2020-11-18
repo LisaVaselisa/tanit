@@ -1,0 +1,30 @@
+.button {
+  font-family: @font-main;
+  font-size: 12px;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: @color-white;
+  text-transform: uppercase;
+  text-align: center;
+  width: 150px;
+  background-color: transparent;
+  border: 1px solid @color-graydark;
+  padding: 15px;
+  display: block;
+
+  @media (min-width: @desktop-min) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    border-color: @color-yellow;
+  }
+
+  &:focus,
+  &:active {
+    color: @color-yellow;
+    border-color: @color-yellow;
+    outline: none;
+  }
+}
