@@ -1,0 +1,44 @@
+.promo {
+  padding: 15px 0;
+}
+
+.promo__list {
+  position: relative;
+  .list-no();
+  height: 268px;
+}
+
+.promo__item {
+  position: absolute;
+  .element-size(100%, 100%);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+}
+
+.promo__item:nth-of-type(1) {
+  background: red;
+}
+
+.promo__item:nth-of-type(2) {
+  background: orange;
+}
+
+.promo__item:nth-of-type(3) {
+  background: green;
+}
+
+.promo__item:nth-of-type(4) {
+  background: blue;
+}
+
+.promo__item:nth-of-type(5) {
+  background: purple;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+}

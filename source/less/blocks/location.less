@@ -1,154 +1,106 @@
 .location {
   position: relative;
   padding: 15px 0;
-}
-
-.location__list {
-  counter-reset: number;
-  .list-no();
-  display: flex;
+  overflow: hidden;
+  // width: 290px;
+  // width: 100%;
 
   // @media (min-width: @tablet-min) {
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
-  //   gap: 40px;
+  //   // width: 738px;
+  //   width: 100%;
   // }
 
   // @media (min-width: @desktop-min) {
-  //   display: grid;
-  //   grid-template-columns: repeat(4, 1fr);
-  //   gap: 40px;
+  //   width: 994px;
   // }
 }
 
-.location__item {
-  position: relative;
-  padding-top: 40px;
-  min-width: 290px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    .element-size(5px, 5px);
-    background-color: @color-yellow;
-    top: 7px;
-    left: 5px;
-    border-radius: 50%;
-  }
-
-  &::after {
-    position: absolute;
-    content: counter(number);
-    counter-increment: number;
-    font-size: 24px;
-    .element-size(40px, 40px);
-    color: @color-graydark;
-    font-weight: 300;
-    top: 0;
-    left: 30px;
-  }
-
-  @media (min-width: @tablet-min) {
-    min-width: 220px;
-
-    &:not(:last-child) {
-      margin-right: 24px;
-    }
-  }
-
-  @media (min-width: @desktop-min) {
-    min-width: 203px;
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
-}
-
-.location__name {
-  position: absolute;
-  content: "";
-  transform: rotate(90deg);
-  transform-origin: 0 100%;
-  max-width: 225px;
-  top: 28px;
-  left: 0;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: @color-yellow;
-  }
-}
-
-.location__item-link {
-  display: block;
-  padding-left: 30px;
-}
-
-.location__img {
-  display: block;
-  height: 200px;
-
-
-  @media (min-width: @tablet-min) {
-    width: 190px;
-    margin: 0;
-  }
-
-  @media (min-width: @desktop-min) {
-    width: 173px;
-    margin: 0;
-  }
+.location__list {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 290px;
 }
 
 .location__arrow {
   position: absolute;
-  content: "";
-  border: solid @bg-dark;
-  border-width: 2px 2px 0 0;
-  .element-size(15px, 15px);
-  background: transparent;
-  top: 54%;
-  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  .element-size(40px, 50px);
+  background: @color-rgba;
+  top: 55%;
+  transform: translateY(-50%);
+  border: none;
+
+  &::after {
+    display: block;
+    content: "";
+    border: solid @color-white;
+    border-width: 2px 2px 0 0;
+    .element-size(20px, 20px);
+    cursor: pointer;
+  }
 
   &--left {
-    transform: rotate(-135deg);
-    left: 16%;
+    left: 40px;
 
-    @media (min-width: @tablet-min) {
-      left: 7%;
-    }
-
-    @media (min-width: @desktop-min) {
-      left: 5%;
+    &::after {
+      transform: rotate(-135deg);
     }
   }
 
   &--right {
-    transform: rotate(45deg);
-    right: 6%;
+    right: 0;
 
-    @media (min-width: @tablet-min) {
-      right: 2.5%;
-    }
-
-    @media (min-width: @desktop-min) {
-      right: 2%;
+    &::after {
+      transform: rotate(45deg);
     }
   }
 
-  &:hover {
-    border-width: 3px 3px 0 0;
-  }
-
-  &:focus,
-  &:active {
-    border-width: 3px 3px 0 0;
-    border-color: @color-yellow;
-    outline: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.5;
   }
 }
+
+.location__arrow-show {
+  display: flex;
+}
+
+// .location__arrow--left::before {
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+// }
+
+// .location__arrow--right::before {
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+// }
+
+
+// .location__arrow {
+//   position: absolute;
+//   content: "";
+//   border: solid @bg-dark;
+//   border-width: 2px 2px 0 0;
+//   .element-size(15px, 15px);
+//   background: transparent;
+//   top: 54%;
+//   cursor: pointer;
+
+
+//   &:hover {
+//     border-width: 3px 3px 0 0;
+//   }
+
+//   &:focus,
+//   &:active {
+//     border-width: 3px 3px 0 0;
+//     border-color: @color-yellow;
+//     outline: none;
+//   }
+// }
+
 
 .location__link {
   text-decoration: none;

@@ -74,8 +74,12 @@
 .contacts__map {
   display: block;
   background-color: @color-graydark;
-  .element-size(290px, 270px);
+  height: 270px;
   border: 1px solid @color-graydark;
+
+  @media (min-width: @tablet-min) {
+    .element-size(290px, 270px);
+  }
 }
 
 .contacts__iframe {
@@ -85,6 +89,8 @@
 }
 
 .contacts__form {
+  // width: 290px;
+
   @media (min-width: @tablet-min) {
     width: 55%;
   }
