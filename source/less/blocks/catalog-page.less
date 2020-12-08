@@ -1,18 +1,19 @@
 .catalog-page {
-  padding-bottom: 30px;
-  display: grid;
-  justify-content: center;
+  padding-bottom: 10px;
 }
 
 .catalog-page__list {
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  // display: grid;
+  // gap: 20px;
 
-  @media (min-width: @tablet-min) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // @media (min-width: @tablet-min) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 
-  @media (min-width: @desktop-min) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  // @media (min-width: @desktop-min) {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
 }
