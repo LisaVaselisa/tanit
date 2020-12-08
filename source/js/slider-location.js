@@ -3,21 +3,25 @@
 var multiItemSlider = (function () {
   return function (selector) {
     var mainElement = document.querySelector(selector); // основный элемент блока
-    var locationList = mainElement.querySelector('.location__list'); // location__list
-    var locationItems = mainElement.querySelectorAll('.catalog__item'); // элементы location__item
+    var locationList = mainElement.querySelector('.location__list');
+    var locationItems = mainElement.querySelectorAll('.catalog__item');
     var arrows = mainElement.querySelectorAll('.location__arrow'); // кнопки управления
-    var arrowLeft = mainElement.querySelector('.location__arrow--left'); // кнопка "left"
-    var arrowRight = mainElement.querySelector('.location__arrow--right'); // кнопка "right"
+    var arrowLeft = mainElement.querySelector('.location__arrow--left');
+    var arrowRight = mainElement.querySelector('.location__arrow--right');
     var listWidth = parseFloat(getComputedStyle(locationList).width); // ширина обёртки
     var itemWidth = parseFloat(getComputedStyle(locationItems[0]).width); // ширина одного элемента
     var leftItem = 0; // позиция левого активного элемента
     var transform = 0; // значение транфсофрмации .slider__list
-    var step = itemWidth / listWidth * 100; // величина шага (для трансформации)
+    var step = itemWidth / listWidth * 100; // величина шага
     var items = []; // массив элементов
 
     // наполнение массива items
     locationItems.forEach(function (item, index) {
-      items.push({ item: item, position: index, transform: 0 });
+      items.push({
+        item: item,
+        position: index,
+        transform: 0
+      });
     });
 
     var position = {
@@ -64,8 +68,7 @@ var multiItemSlider = (function () {
       }
     };
 
-
-    // добавление к кнопкам "назад" и "вперед" обрботчика arrowClick для событя click
+    // добавление к кнопкам "назад" и "вперед" обработчика arrowClick для событя click
     var setUpListeners = function () {
       arrows.forEach(function (item) {
         item.addEventListener('click', arrowClick);
